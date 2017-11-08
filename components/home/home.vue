@@ -1,7 +1,9 @@
 <template>
-   <xtop></xtop>
-   <xsidebar></xsidebar>
-   <router-view></router-view>
+   <div>
+      <xtop></xtop>
+      <xsidebar></xsidebar>
+      <router-view></router-view>
+   </div>
 </template>
 
 
