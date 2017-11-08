@@ -31,7 +31,7 @@ const router = new VueRouter({
          component: xcontent
       },{
          path: "column",
-         component: column
+         component: xcolumn
       }]
    }]
 });

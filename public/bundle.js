@@ -740,7 +740,7 @@ const router = new __WEBPACK_IMPORTED_MODULE_2_vue_router__["a" /* default */]({
          component: __WEBPACK_IMPORTED_MODULE_6__components_home_content_content_vue__["a" /* default */]
       },{
          path: "column",
-         component: column
+         component: __WEBPACK_IMPORTED_MODULE_7__components_home_columns_column_vue__["a" /* default */]
       }]
    }]
 });
@@ -16113,7 +16113,7 @@ if (false) {(function () {
   })
 })()}
 
-/* unused harmony default export */ var _unused_webpack_default_export = (Component.exports);
+/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
 
 
 /***/ }),
@@ -16190,6 +16190,7 @@ exports.push([module.i, "\n.popup-overlay {\n\tposition: fixed;\n\ttop: 0;\n\tle
 //
 //
 //
+
 
 
 
