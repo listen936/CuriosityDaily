@@ -1,5 +1,7 @@
 <template>
-   <div>home</div>
+   <xtop></xtop>
+   <xsidebar></xsidebar>
+   <router-view></router-view>
 </template>
 
 
