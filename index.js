@@ -10,6 +10,8 @@ Vue.use(VueRouter);
 import xhome from './components/home/home.vue';
 import xarticle from './components/article/article.vue';
 
+
+
 import xuser from './components/home/user/user.vue';
 import xcontent from './components/home/content/content.vue';
 
@@ -47,6 +49,7 @@ new Vue({
 	`,
    components: {
       xarticle,
-      xhome
+      xhome,
+      
    }
 });
