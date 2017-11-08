@@ -14,6 +14,7 @@ import xarticle from './components/article/article.vue';
 
 import xuser from './components/home/user/user.vue';
 import xcontent from './components/home/content/content.vue';
+import xcolumn from "./components/home/columns/column.vue"
 
 const router = new VueRouter({
    routes: [{
@@ -28,6 +29,9 @@ const router = new VueRouter({
       },{
          path: "content",
          component: xcontent
+      },{
+         path: "column",
+         component: column
       }]
    }]
 });
