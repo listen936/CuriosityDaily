@@ -21,10 +21,10 @@ const router = new VueRouter({
       path: "/home",
       component: xhome,
       children: [{
-         path: "user.vue",
+         path: "user",
          component: xuser
       },{
-         path: "content.vue",
+         path: "content",
          component: xcontent
       }]
    }]
