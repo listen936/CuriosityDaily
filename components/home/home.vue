@@ -1,10 +1,13 @@
 <template>
-  <div>home</div>
+   <div>home</div>
 </template>
 
+
 <script>
-export default {
-  import  from ''
-}
+   export default {
+      xtop: './top.vue',
+      xsidebar: './sidebar.vue'
+   }
 </script>
 
+<
