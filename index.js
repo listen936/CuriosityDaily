@@ -42,6 +42,9 @@ const router = new VueRouter({
          path: "column",
          component: xcolumn
       }]
+   },{
+      path: '/',
+      redirect: '/home'
    }]
 });
 const store = new Vuex.Store({
