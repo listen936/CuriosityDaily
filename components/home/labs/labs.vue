@@ -1,7 +1,7 @@
 <template>
 	<div class="page-content">
 		<div class="papers clearfix" data-lastkey="1509210040">
-			<a href="/mobile/papers/2000.html" class="com-grid-paper small" data-initialized="true" data-guid="3">
+			<a href="#" class="com-grid-paper small" data-initialized="true" data-guid="3">
 				<div class="grid-paper-bd">
 					<div class="imgcover pic"> <img class=" lazyloaded" data-src="http://img.qdaily.com/paper/paper_show/20171107163421n6va71F2Kw0Iq3BT.jpg?imageMogr2/auto-orient/thumbnail/!480x240r/gravity/Center/crop/480x240/quality/85/format/webp/ignore-error/1" alt="哪些商家为你费心锦上添花的商品，你其实希望越简单越好？" src="http://img.qdaily.com/paper/paper_show/20171107163421n6va71F2Kw0Iq3BT.jpg?imageMogr2/auto-orient/thumbnail/!480x240r/gravity/Center/crop/480x240/quality/85/format/webp/ignore-error/1"> </div>
 					<p class="category clearfix circle x44"> <img class=" lazyloaded" data-src="http://img.qdaily.com/paper_category/icon_white/20160722174257B2WUkThIMQqz10YS.png?imageMogr2/auto-orient/thumbnail/!128x128r/gravity/Center/crop/128x128/quality/85/ignore-error/1" alt="投票" src="http://img.qdaily.com/paper_category/icon_white/20160722174257B2WUkThIMQqz10YS.png?imageMogr2/auto-orient/thumbnail/!128x128r/gravity/Center/crop/128x128/quality/85/ignore-error/1"> </p>
@@ -31,6 +31,18 @@
 </template>
 
 <script>
+	export default{
+		data(){
+			bool:true
+		},
+		mounted(){
+			this.$http.get("../assets/json/labs.json",{
+				
+			}).then(function(data){
+				console.log(data);
+			})
+		}
+	}
 </script>
 
 <style>
