@@ -52,20 +52,21 @@
 </template>
 
 <script>
-export default {
-   data(){
-      return{
+   export default {
+      data() {
+         return {
 
-      } 
-   },
-   methods:{
-      changeShow: function(){
-         this.$store.state.signShow = !this.$store.state.signShow
+         }
+      },
+      methods: {
+         changeShow: function () {
+            this.$store.state.signShow = !this.$store.state.signShow;
+
+         }
       }
    }
-}
 </script>
 
 <style scoped>
-   
+
 </style>

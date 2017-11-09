@@ -1,5 +1,5 @@
 <template>
-   <div>
+   <div @touchmove.prevent>
       <div class="popup com-login-popup modal-in absolute" :class="signShow ? 'popup-show': 'popup-hide' " style="display: block;">
          <div class="login-popup-hd">
             <a href="#" class="spirt icon-login-logo"></a>
@@ -32,6 +32,7 @@
       methods: {
          changeShow: function () {
             this.$store.state.signShow = !this.$store.state.signShow
+
          }
       },
       computed: {
