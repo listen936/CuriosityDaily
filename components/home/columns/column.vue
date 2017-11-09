@@ -414,7 +414,7 @@
 		width: 6rem;
 		height: 49px;
 		height: 2.45rem;
-		background: transparent url(/images/icon-login-logo.png) 0 0 no-repeat;
+		/*background: transparent url(/images/icon-login-logo.png) 0 0 no-repeat;*/
 		background-size: contain
 	}
 	
