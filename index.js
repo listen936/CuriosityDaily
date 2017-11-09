@@ -15,8 +15,13 @@ import xuser from './components/home/user/user.vue';
 import xaccount from './components/home/user/account.vue';
 import xcenter from './components/home/user/center.vue';
 
+
 import xcontent from './components/home/content/content.vue';
+//栏目中心组件
 import xcolumn from "./components/home/columns/column.vue"
+
+//生活研究院组件
+import xlabs from "./components/home/labs/labs.vue"
 
 const router = new VueRouter({
    routes: [{
@@ -41,6 +46,9 @@ const router = new VueRouter({
       },{
          path: "column",
          component: xcolumn
+      },{
+         path: "labs",
+         component: xlabs
       }]
    },{
       path: '/',
