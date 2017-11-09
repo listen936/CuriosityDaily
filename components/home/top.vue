@@ -11,7 +11,7 @@
             <div class="user signin">
                <a rel="nofollow" href="#" class="user-hd">
                   <i class="iconfont icon-user"></i>
-                  <span class="name">云流れ</span>
+                  <span class="name">登录</span>
                </a>
                <div class="user-bd hidden">
                   <ul class="items">
