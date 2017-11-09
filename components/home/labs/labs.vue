@@ -54,8 +54,6 @@
 		directives: {
 					scroll: {
 						bind: function(el, binding) {
-//							console.log(el)
-						
 							window.onscroll = function(){			
 								if(document.documentElement.scrollTop + document.documentElement.clientHeight>= document.documentElement.scrollHeight) {
 									binding.value()

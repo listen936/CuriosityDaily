@@ -1,13 +1,13 @@
 <template>
 	<div class="page-content" data-lastkey="1507874419">
 		<div class="com-column-list" data-initialized="true" data-guid="23">
-			<div class="container clearfix">
+			<div class="container clearfix" v-scroll="loadMore">
 				<!--v-for-->
 				<a v-for="a in arr" class="com-grid-column" :id="a.id">
-					<div class="grid-column-hd">
+					<div class="grid-column-hd" >
 						<div class="imgcover pic"><img class=" lazyloaded" :src="a.img"></div>
 						<p class="column">{{a.title}}</p>
-						<span class="subscribe iconfont icon-jiadingyue" v-scroll="loadMore"></span></div>
+						<span class="subscribe iconfont icon-jiadingyue"  :isyes='a.subscription'></span></div>
 					<div class="grid-column-bd">
 						<p class="name"><span class="iconfont icon-lanmuzuozhe"></span>{{a.where}}</p>
 						<p class="text"><span class="subscribe-num">{{a.subscribeNum}}</span>人订阅, 更新至 <span class="article-num">{{a.articleNum}}</span>篇</p>
@@ -17,9 +17,9 @@
 		</div>
 		<div class="com-loader nomore" data-guid="2" data-initialized="true">
 			<div class="loader-bd">
-				<p class="notext">没有更多啦</p>
-				<a rel="nofollow" href="#" class="btn showtext ripple">加载更多</a>
-				<div class="spinner">
+				<p class="notext" v-show="!bool">没有更多啦</p>
+				<a rel="nofollow" href="#" class="btn showtext ripple" v-show="bool">加载更多</a>
+				<div class="spinner" v-show="bool">
 					<div class="bounce1"></div>
 					<div class="bounce2"></div>
 					<div class="bounce3"></div>
@@ -31,25 +31,21 @@
 </template>
 
 <script>
-	import $ from "jquery";
 	export default {
 		data() {
 			return {
 				bool: true,
 				arr: [],
-				id: 0
+				id: 0,
+				n:1
 			}
 		},
 		methods: {
 			loadMore: function() {
 				self = this;
-				$.ajax({
-					url: "../assets/json/columns.json",
-					type: "get",
-					async: true,
-					success: function(data) {
-						self.arr = self.arr.concat(data)
-					}
+				this.$http.get("../assets/json/columns.json").then(function(data) {
+					 self.arr = self.arr.concat(data.body.splice((self.n-1)*10,10));
+					self.n = self.n + 1;
 				})
 			}
 		},
@@ -59,12 +55,14 @@
 		directives: {
 			scroll: {
 				bind: function(el, binding) {
-					el.addEventListener("scroll", function(e) {
-						if(e.target.offsetHeight + e.target.scrollTop >= e.target.scrollHeight) {
-							console.log("到底了")
+					window.onscroll = function() {
+						if(document.documentElement.scrollTop + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
 							binding.value()
+							if(self.n >= 5) {
+								self.bool = false;
+							}
 						}
-					})
+					}
 				}
 			}
 		}
