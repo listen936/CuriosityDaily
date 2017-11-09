@@ -22,7 +22,7 @@
 						</ul>
 					</div>
 					<div class="baseslide-wrapper" style="height: 100px;">
-						<div class="baseslide collect-article"  :class="id==1?'cur':'left'" >
+						<div class="baseslide collect-article"  :class="id==1?'cur':'left'" style="left:0px">
 							<div class="packery-container articles clearfix" data-lastkey="0"></div>
 							<div class="origin-container" style="display:none"></div>
 							<div class="collect-loader">
@@ -39,7 +39,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="baseslide attend-paper"  :class="id==2? 'cur' : 'right'" >
+						<div class="baseslide attend-paper"  :class="id==2? 'cur' : 'right'" style="left:375px">
 							<div class="papers clearfix" data-lastkey="0"></div>
 							<div class="attend-loader">
 								<div class="com-loader nomore" data-guid="3" data-initialized="true">
@@ -77,8 +77,7 @@
 					id:2
 				}],
 				id:1,
-				one:'',
-				two:''
+
 			}
 		},
 		methods:{
@@ -87,22 +86,23 @@
 			},
 		},
 		watch:{
-			one:function(){
+			id:function(){
 				if(this.id==1){
-					$(".attend-paper").anmiate({right:375},function(){
-						alert(1)
-					})
+						$(".collect-article").animate({left:0},function(){						
+						})
+						$(".attend-paper").animate({left:375},function(){							
+						})					
+				}else{
+						$(".collect-article").animate({left:-375},function(){							
+						})
+						$(".attend-paper").animate({left:0},function(){							
+						})
 				}
 			},
-			two:function(){
-				if(this.id==2){
-					$(".collect-article").anmiate({left:-375},function(){
-						alert(2)
-					})
-				}
-			},
-		}
+		},
+
 	}
+
 </script>
 
 <style lang="scss" scoped>
@@ -1047,7 +1047,7 @@
 		width: 16rem;
 		height: 240px;
 		height: 10.24rem;
-		background: url(./image/radar.png) no-repeat;
+		background: url(../../../assets/images/radar.png) no-repeat;
 		background-size: 100%;
 		text-align: center
 	}
