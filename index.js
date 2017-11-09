@@ -19,7 +19,8 @@ import xcenter from './components/home/user/center.vue';
 import xcontent from './components/home/content/content.vue';
 //栏目中心组件
 import xcolumn from "./components/home/columns/column.vue"
-
+//搜索组件
+import xsearch from "./components/home/search/search.vue"
 //生活研究院组件
 import xlabs from "./components/home/labs/labs.vue"
 
@@ -49,6 +50,9 @@ const router = new VueRouter({
       },{
          path: "labs",
          component: xlabs
+      },{
+      	path: "search",
+      	component: xsearch
       }]
    },{
       path: '/',
