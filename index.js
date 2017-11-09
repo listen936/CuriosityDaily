@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import VueRouter from "vue-router";
 
+
 Vue.use(Vuex);
 Vue.use(VueRouter);
 
@@ -10,9 +11,10 @@ Vue.use(VueRouter);
 import xhome from './components/home/home.vue';
 import xarticle from './components/article/article.vue';
 
-
-
 import xuser from './components/home/user/user.vue';
+import xaccount from './components/home/user/account.vue';
+import xcenter from './components/home/user/center.vue';
+
 import xcontent from './components/home/content/content.vue';
 import xcolumn from "./components/home/columns/column.vue"
 
@@ -25,7 +27,14 @@ const router = new VueRouter({
       component: xhome,
       children: [{
          path: "user",
-         component: xuser
+         component: xuser,
+         children: [{
+            path: "account",
+            component: xaccount
+         },{
+            path: "center",
+            component: xcenter
+         }]
       },{
          path: "content",
          component: xcontent
