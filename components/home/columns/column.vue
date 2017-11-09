@@ -438,10 +438,6 @@
 		font-size: .7rem
 	}
 	
-	.com-login-popup .login-popup-bd form {
-		display: none
-	}
-	
 	.com-login-popup .login-popup-bd form .small-title {
 		position: relative;
 		color: #b3b3b3;

@@ -18,9 +18,9 @@
 
 		<div class="com-loader loading " data-guid="2" data-initialized="true">
 			<div class="loader-bd">
-				<p class="notext">没有更多啦</p>
-				<a rel="nofollow" href="#" class="btn showtext ripple">加载更多</a>
-				<div class="spinner">
+				<p class="notext" v-show="!bool">没有更多啦</p>
+				<a rel="nofollow" href="#" class="btn showtext ripple" v-show="bool">加载更多</a>
+				<div class="spinner" v-show="bool">
 					<div class="bounce1"></div>
 					<div class="bounce2"></div>
 					<div class="bounce3"></div>
@@ -35,7 +35,8 @@
 		data() {
 			return {
 				arr: [],
-				n: 1
+				n: 1,
+				bool:true
 			}
 		},
 		methods: {
@@ -54,12 +55,15 @@
 					scroll: {
 						bind: function(el, binding) {
 //							console.log(el)
-							window.addEventListener("scroll", function(e) {
-								if(e.target.offsetHeight .scrollTop >= e.target.scrollHeight) {
-									console.log("到底了")
+						
+							window.onscroll = function(){			
+								if(document.documentElement.scrollTop + document.documentElement.clientHeight>= document.documentElement.scrollHeight) {
 									binding.value()
+									if(self.n >= 6){
+										self.bool = false;
+									}
 								}
-							})
+							}
 						}
 					}
 				}
@@ -565,9 +569,7 @@
 		font-size: .7rem
 	}
 	
-	.com-login-popup .login-popup-bd form {
-		display: none
-	}
+	
 	
 	.com-login-popup .login-popup-bd form .small-title {
 		position: relative;
