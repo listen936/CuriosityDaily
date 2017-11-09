@@ -2,10 +2,12 @@ import Vue from "vue";
 import Vuex from "vuex";
 import VueRouter from "vue-router";
 import VueResource from "vue-resource";
+import VueCookie from "vue-cookie";
 
 Vue.use(Vuex);
 Vue.use(VueRouter);
 Vue.use(VueResource);
+Vue.use(VueCookie);
 
 //引入组件
 import xhome from './components/home/home.vue';
