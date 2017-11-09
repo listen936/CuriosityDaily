@@ -2,7 +2,7 @@
 	<div class="page-content" data-lastkey="1507874419">
 		<div class="com-column-list" data-initialized="true" data-guid="23">
 			<div class="container clearfix">
-				<a class="com-grid-column" href="/mobile/special_columns/13.html" data-id="13" data-initialized="true" data-guid="3">
+				<a class="com-grid-column" href="#" data-id="13" data-initialized="true" data-guid="3">
 					<div class="grid-column-hd">
 						<div class="imgcover pic"><img class=" lazyloaded" data-src="http://img.qdaily.com/special_column/column/201607031834375pBWZD82vKRPLfgn.jpg?imageMogr2/auto-orient/thumbnail/!204x204r/gravity/Center/crop/204x204/quality/85/format/webp/ignore-error/1" src="http://img.qdaily.com/special_column/column/201607031834375pBWZD82vKRPLfgn.jpg?imageMogr2/auto-orient/thumbnail/!204x204r/gravity/Center/crop/204x204/quality/85/format/webp/ignore-error/1"></div>
 						<p class="column">这世界</p><span class="subscribe iconfont icon-jiadingyue"></span></div>
