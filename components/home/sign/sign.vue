@@ -22,6 +22,11 @@
 
          }
       },
+      components: {
+         xlogin,
+         xregister,
+         xforget
+      },
       methods: {
          changeShow: function () {
             this.$store.state.signShow = !this.$store.state.signShow
