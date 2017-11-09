@@ -40,6 +40,9 @@ const router = new VueRouter({
          },{
             path: "center",
             component: xcenter
+         },{
+            path: 'user',
+            redirect: 'center'
          }]
       },{
          path: "content",
