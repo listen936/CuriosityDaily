@@ -1,11 +1,11 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import VueRouter from "vue-router";
-
+import VueResource from "vue-resource";
 
 Vue.use(Vuex);
 Vue.use(VueRouter);
-
+Vue.use(VueResource);
 
 //引入组件
 import xhome from './components/home/home.vue';
@@ -22,6 +22,7 @@ import xcolumn from "./components/home/columns/column.vue"
 
 //生活研究院组件
 import xlabs from "./components/home/labs/labs.vue"
+
 
 const router = new VueRouter({
    routes: [{
@@ -55,11 +56,13 @@ const router = new VueRouter({
       redirect: '/home'
    }]
 });
+
 const store = new Vuex.Store({
    state: {
-      
+      signShow:false
    }
 });
+
 
 new Vue({
    el: "#app",
@@ -73,7 +76,6 @@ new Vue({
 	`,
    components: {
       xarticle,
-      xhome,
-      
+      xhome,    
    }
 });

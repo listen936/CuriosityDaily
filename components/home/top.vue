@@ -9,7 +9,7 @@
          </div>
          <div class="header-right">
             <div class="user signin">
-               <a rel="nofollow" href="#" class="user-hd">
+               <a rel="nofollow" href="#" class="user-hd" @click="changeShow">
                   <i class="iconfont icon-user"></i>
                   <span class="name">登录</span>
                </a>
@@ -53,7 +53,16 @@
 
 <script>
 export default {
-  
+   data(){
+      return{
+
+      } 
+   },
+   methods:{
+      changeShow: function(){
+         this.$store.state.signShow = !this.$store.state.signShow
+      }
+   }
 }
 </script>
 
