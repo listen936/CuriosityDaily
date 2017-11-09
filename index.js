@@ -66,7 +66,8 @@ const router = new VueRouter({
 
 const store = new Vuex.Store({
    state: {
-      signShow:false
+      signShow:false,
+      switchNum: 0
    }
 });
 

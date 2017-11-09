@@ -5,9 +5,11 @@
             <a href="#" class="spirt icon-login-logo"></a>
             <a href="#" class="iconfont icon-close close-popup" @click="changeShow"></a>
          </div>
-         <xlogin></xlogin>
-         <xregister></xregister>
-         <xforget></xforget>
+         <div class="login-popup-bd">
+            <xforget></xforget>
+            <xlogin></xlogin>
+            <xregister></xregister>
+         </div>
       </div>
    </div>
 </template>
@@ -43,6 +45,8 @@
 <style scoped>
    .popup-show {
       top: 0%!important;
+      height: 100%!important;
+      overflow: hidden!important;
       -webkit-transition: all 0.5s;
       -moz-transition: all 0.5s;
       transition: all 0.5s;
@@ -50,6 +54,8 @@
 
    .popup-hide {
       top: 100%!important;
+      height: 0%!important;
+      overflow: hidden!important;
       -webkit-transition: all 0.5s;
       -moz-transition: all 0.5s;
       transition: all 0.5s;
