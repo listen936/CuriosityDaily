@@ -109,17 +109,7 @@
 </script>
 
 <style>
-	/*.fade-enter-active{
-		animation: change 0s;
-	}
-	.fade-leave-active{
-		animation:change 4s;
-	}
-	@keyframes change{
-		0%{opacity: 1;}
-		75%{opacity: 1;}
-		100%{opacity: 0;}
-	}*/
+
 	.popup-overlay {
 		position: fixed;
 		top: 0;
