@@ -1,6 +1,17 @@
 <template>
 	<div>
-		<div v-for="a in arr1" v-scroll="loadMore">
+		<div v-for="a in arr1" v-scroll="loadMore">		
+			<div class="packery-item combo">
+				<a v-for="aa in a.arr" href="/mobile/articles/47107.html" class="com-grid-article" data-initialized="true" data-guid="5">
+					<div class="grid-article-hd">
+						<div class="imgcover pic"><img class=" lazyloaded" data-src="http://img.qdaily.com/article/article_show/20171110094118iRods3U9c4E6N5mv.jpg?imageMogr2/auto-orient/thumbnail/!240x158r/gravity/Center/crop/240x158/quality/85/format/webp/ignore-error/1" alt="看图：这里是过去24小时内发生的重要的事" :src="aa.img"></div>
+						<p class="category clearfix"> <span :class="aa.icon"></span> <span>{{aa.icon1}}</span> </p>
+						<div class="ribbon"> <span :class="aa.vx">{{aa.vx1}}</span> <span :class="aa.red">{{aa.red1}}</span> </div>
+					</div>
+					<div class="grid-article-bd">
+						<h1>{{aa.desc}}</h1><span class="smart-date" data-origindate="2017-11-10 09:53:11 +0800">{{aa.time}}</span></div>
+				</a>
+			</div>
 			<div class="packery-item single">
 				<a href="/mobile/articles/47108.html" class="com-grid-key-article" data-initialized="true" data-guid="25">
 					<div class="grid-key-article-hd">
@@ -11,17 +22,6 @@
 						<h1 class="title">{{a.desc}}</h1>
 						<div class="ribbon"> <span :class="a.vx">{{a.vx1}}</span> <span :class="a.red">{{a.red1}}</span> </div>
 					</div>
-				</a>
-			</div>
-			<div class="packery-item combo">
-				<a v-for="aa in a.arr" href="/mobile/articles/47107.html" class="com-grid-article" data-initialized="true" data-guid="5">
-					<div class="grid-article-hd">
-						<div class="imgcover pic"><img class=" lazyloaded" data-src="http://img.qdaily.com/article/article_show/20171110094118iRods3U9c4E6N5mv.jpg?imageMogr2/auto-orient/thumbnail/!240x158r/gravity/Center/crop/240x158/quality/85/format/webp/ignore-error/1" alt="看图：这里是过去24小时内发生的重要的事" :src="aa.img"></div>
-						<p class="category clearfix"> <span :class="aa.icon"></span> <span>{{aa.icon1}}</span> </p>
-						<div class="ribbon"> <span :class="aa.vx">{{aa.vx1}}</span> <span :class="aa.red">{{aa.red1}}</span> </div>
-					</div>
-					<div class="grid-article-bd">
-						<h1>{{aa.desc}}</h1><span class="smart-date" data-origindate="2017-11-10 09:53:11 +0800">{{aa.time}}</span></div>
 				</a>
 			</div>
 		</div>
