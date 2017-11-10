@@ -1,13 +1,13 @@
 <template>
    <form class="register" :class="switchNum == 1 ? 'appear' : 'rehidden' " action="">
       <div class="form-control">
-         <input type="text" name="user[email]" placeholder="电子邮箱">
+         <input type="text" name="email" placeholder="电子邮箱" v-model="username" onblur="confirm">
       </div>
       <div class="form-control">
-         <input type="password" name="user[password]" placeholder="创建密码">
+         <input type="password" name="password" placeholder="创建密码" v-model="pwd">
       </div>
       <div class="form-control">
-         <input type="password" name="user[password_confirmation]" placeholder="确认密码">
+         <input type="password" name="password_confirmation" placeholder="确认密码">
       </div>
       <div class="form-control agree" style="display:none">
          <input type="radio">
@@ -26,6 +26,13 @@
 
 <script>
    export default {
+   	data(){
+   		return {
+   			username:"",
+   			pwd:""
+   		}
+   		
+   	},
       methods: {
          changeNum0: function () {
             this.$store.state.switchNum = 0

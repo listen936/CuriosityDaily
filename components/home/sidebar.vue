@@ -28,43 +28,43 @@
 
                         <ul class="news-items" :class="{'news-dropdown':isDropdown}">
                            <li class="news-item ">
-                              <a @click="sideBarHide" class="nav-item">
+                              <a @click="sideBarHide" class="nav-item" href="#/home/news">
                                  <span class="iconfont icon-changwenzhang"></span> 长文章 </a>
                            </li>
                            <li class="news-item ">
-                              <a @click="sideBarHide" class="nav-item">
+                              <a @click="sideBarHide" class="nav-item" href="#/home/news">
                                  <span class="iconfont icon-10getu"></span> 10 个图 </a>
                            </li>
                            <li class="news-item ">
-                              <a @click="sideBarHide" class="nav-item">
+                              <a @click="sideBarHide" class="nav-item" href="#/home/news">
                                  <span class="iconfont icon-top15"></span> Top 15 </a>
                            </li>
                            <li class="news-item ">
-                              <a @click="sideBarHide" class="nav-item">
+                              <a @click="sideBarHide" class="nav-item" href="#/home/news">
                                  <span class="iconfont icon-shangye"></span> 商业 </a>
                            </li>
                            <li class="news-item ">
-                              <a @click="sideBarHide" class="nav-item">
+                              <a @click="sideBarHide" class="nav-item" href="#/home/news">
                                  <span class="iconfont icon-zhineng"></span> 智能 </a>
                            </li>
                            <li class="news-item ">
-                              <a @click="sideBarHide" class="nav-item">
+                              <a @click="sideBarHide" class="nav-item" href="#/home/news">
                                  <span class="iconfont icon-sheji"></span> 设计 </a>
                            </li>
                            <li class="news-item ">
-                              <a @click="sideBarHide" class="nav-item">
+                              <a @click="sideBarHide" class="nav-item" href="#/home/news">
                                  <span class="iconfont icon-shishang"></span> 时尚 </a>
                            </li>
                            <li class="news-item ">
-                              <a @click="sideBarHide" class="nav-item">
+                              <a @click="sideBarHide" class="nav-item" href="#/home/news">
                                  <span class="iconfont icon-yule"></span> 娱乐 </a>
                            </li>
                            <li class="news-item ">
-                              <a @click="sideBarHide" class="nav-item">
+                              <a @click="sideBarHide" class="nav-item" href="#/home/news">
                                  <span class="iconfont icon-chengshi"></span> 城市 </a>
                            </li>
                            <li class="news-item ">
-                              <a @click="sideBarHide" class="nav-item">
+                              <a @click="sideBarHide" class="nav-item" href="#/home/news">
                                  <span class="iconfont icon-youxi"></span> 游戏 </a>
                            </li>
                         </ul>
@@ -83,7 +83,7 @@
             </div>
          </div>
          <div class="sidebar-panel-ft">
-            <a href="#/home/search" class="search">
+            <a href="#/home/search" class="search" @click="sideBarHide">
                <div class="mock-input">搜索</div>
                <span class="iconfont icon-search"></span>
             </a>
