@@ -797,7 +797,7 @@ button.swiper-pagination-bullet {
 
 .login-screen.absolute,
 .popup.absolute {
-   position: absolute
+   position: absolute;
 }
 
 .login-screen.relative,
@@ -1072,7 +1072,7 @@ html.with-statusbar-overlay .popup.tablet-fullscreen {
    width: 6rem;
    height: 49px;
    height: 2.45rem;
-   background: transparent url(/images/icon-login-logo.png) 0 0 no-repeat;
+   background: transparent url(../images/icon-login-logo.png) 0 0 no-repeat;
    background-size: contain
 }
 
@@ -1097,7 +1097,25 @@ html.with-statusbar-overlay .popup.tablet-fullscreen {
 }
 
 .com-login-popup .login-popup-bd form {
-   display: none
+   opacity: 0;
+   position: absolute;
+   width: 80%;
+   left: 10%;
+}
+
+.rehidden {
+   opacity: 0;
+   height: 0;
+   z-index: -1000;
+}
+
+.appear {
+   display: block;
+   z-index: 1000;
+   opacity: 1!important;
+   -webkit-transition: opacity 0.3s;
+   -moz-transition: opacity 0.3s;
+   transition: opacity 0.3s;
 }
 
 .com-login-popup .login-popup-bd form .small-title {

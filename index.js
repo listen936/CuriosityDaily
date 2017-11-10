@@ -1,11 +1,13 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import VueRouter from "vue-router";
-
+import VueResource from "vue-resource";
+import VueCookie from "vue-cookie";
 
 Vue.use(Vuex);
 Vue.use(VueRouter);
-
+Vue.use(VueResource);
+Vue.use(VueCookie);
 
 //引入组件
 import xhome from './components/home/home.vue';
@@ -24,6 +26,7 @@ import xsearch from "./components/home/search/search.vue"
 //生活研究院组件
 import xlabs from "./components/home/labs/labs.vue"
 
+
 const router = new VueRouter({
    routes: [{
       path: "/article",
@@ -40,6 +43,9 @@ const router = new VueRouter({
          },{
             path: "center",
             component: xcenter
+         },{
+            path: 'user',
+            redirect: 'center'
          }]
       },{
          path: "content",
@@ -59,11 +65,14 @@ const router = new VueRouter({
       redirect: '/home'
    }]
 });
+
 const store = new Vuex.Store({
    state: {
-      
+      signShow:false,
+      switchNum: 0
    }
 });
+
 
 new Vue({
    el: "#app",
@@ -77,7 +86,6 @@ new Vue({
 	`,
    components: {
       xarticle,
-      xhome,
-      
+      xhome,    
    }
 });

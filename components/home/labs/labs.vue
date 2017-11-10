@@ -1,16 +1,16 @@
 <template>
 	<div class="page-content">
-		<div class="papers clearfix" data-lastkey="1509210040">
-			<a href="/mobile/papers/2000.html" class="com-grid-paper small" data-initialized="true" data-guid="3">
+		<div class="papers clearfix" data-lastkey="1509210040"  v-scroll="loadMore">
+			<a v-for="a in arr" href="#" class="com-grid-paper small" data-initialized="true" :data-guid="a.id">
 				<div class="grid-paper-bd">
-					<div class="imgcover pic"> <img class=" lazyloaded" data-src="http://img.qdaily.com/paper/paper_show/20171107163421n6va71F2Kw0Iq3BT.jpg?imageMogr2/auto-orient/thumbnail/!480x240r/gravity/Center/crop/480x240/quality/85/format/webp/ignore-error/1" alt="哪些商家为你费心锦上添花的商品，你其实希望越简单越好？" src="http://img.qdaily.com/paper/paper_show/20171107163421n6va71F2Kw0Iq3BT.jpg?imageMogr2/auto-orient/thumbnail/!480x240r/gravity/Center/crop/480x240/quality/85/format/webp/ignore-error/1"> </div>
-					<p class="category clearfix circle x44"> <img class=" lazyloaded" data-src="http://img.qdaily.com/paper_category/icon_white/20160722174257B2WUkThIMQqz10YS.png?imageMogr2/auto-orient/thumbnail/!128x128r/gravity/Center/crop/128x128/quality/85/ignore-error/1" alt="投票" src="http://img.qdaily.com/paper_category/icon_white/20160722174257B2WUkThIMQqz10YS.png?imageMogr2/auto-orient/thumbnail/!128x128r/gravity/Center/crop/128x128/quality/85/ignore-error/1"> </p>
+					<div class="imgcover pic"> <img class=" lazyloaded" :src="a.img"> </div>
+					<p class="category clearfix circle x44"> <img class=" lazyloaded" alt="投票" :src="a.pic"> </p>
 					<div class="count new" data-publishdate="2017-11-09 01:00:37 +0800"><span class="iconfont icon-join"></span> <span class="text" style="display: block;">NEW</span></div>
 				</div>
 				<div class="grid-paper-ft">
 					<div class="title-description">
-						<h1 class="title">哪些商家为你费心锦上添花的商品，你其实希望越简单越好？</h1>
-						<p class="description">基础配置就可以了，谢谢。</p>
+						<h1 class="title">{{a.title}}</h1>
+						<p class="description">{{a.desc}}</p>
 					</div>
 				</div>
 			</a>
@@ -18,9 +18,9 @@
 
 		<div class="com-loader loading " data-guid="2" data-initialized="true">
 			<div class="loader-bd">
-				<p class="notext">没有更多啦</p>
-				<a rel="nofollow" href="#" class="btn showtext ripple">加载更多</a>
-				<div class="spinner">
+				<p class="notext" v-show="!bool">没有更多啦</p>
+				<a rel="nofollow" href="#" class="btn showtext ripple" v-show="bool">加载更多</a>
+				<div class="spinner" v-show="bool">
 					<div class="bounce1"></div>
 					<div class="bounce2"></div>
 					<div class="bounce3"></div>
@@ -31,6 +31,41 @@
 </template>
 
 <script>
+	export default {
+		data() {
+			return {
+				arr: [],
+				n: 1,
+				bool:true
+			}
+		},
+		methods: {
+			loadMore: function() {
+				self = this;
+				this.$http.get("../assets/json/labs.json").then(function(data) {
+					 self.arr = self.arr.concat(data.body.splice((self.n-1)*10,10));
+					self.n = self.n + 1;
+				})
+			}
+		},
+		mounted() {
+			this.loadMore();
+		},
+		directives: {
+					scroll: {
+						bind: function(el, binding) {
+							window.onscroll = function(){			
+								if(document.documentElement.scrollTop + document.documentElement.clientHeight>= document.documentElement.scrollHeight) {
+									binding.value()
+									if(self.n >= 6){
+										self.bool = false;
+									}
+								}
+							}
+						}
+					}
+				}
+	}
 </script>
 
 <style>
@@ -508,7 +543,7 @@
 		width: 6rem;
 		height: 49px;
 		height: 2.45rem;
-		background: transparent url(/images/icon-login-logo.png) 0 0 no-repeat;
+		/*background: transparent url(/images/icon-login-logo.png) 0 0 no-repeat;*/
 		background-size: contain
 	}
 	
@@ -532,9 +567,7 @@
 		font-size: .7rem
 	}
 	
-	.com-login-popup .login-popup-bd form {
-		display: none
-	}
+	
 	
 	.com-login-popup .login-popup-bd form .small-title {
 		position: relative;
