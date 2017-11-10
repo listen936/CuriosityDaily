@@ -83,7 +83,7 @@
             </div>
          </div>
          <div class="sidebar-panel-ft">
-            <a href="#/home/search" class="search" @click="sideBarHide">
+            <a href="#/home/search" class="search" @click="sidebarShow">
                <div class="mock-input">搜索</div>
                <span class="iconfont icon-search"></span>
             </a>

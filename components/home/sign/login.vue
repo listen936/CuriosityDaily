@@ -1,5 +1,5 @@
 <template>
-   <form class="login" :class="switchNum == 0 ? 'appear' : 'rehidden' " action="">
+   <form class="login" :class="switchNum == 0 ? 'appear' : 'rehidden' " action="/user/login">
       <p class="small-title">
          <span>社交账号登录</span>
       </p>
