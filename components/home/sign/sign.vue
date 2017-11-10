@@ -8,6 +8,7 @@
          <div class="login-popup-bd">
             <xforget></xforget>
             <xlogin></xlogin>
+            <xinfo></xinfo>
             <xregister></xregister>
          </div>
       </div>
@@ -18,6 +19,7 @@
    import xlogin from './login.vue';
    import xregister from './register.vue';
    import xforget from './forget.vue';
+   import xinfo from './info.vue'
    export default {
       data() {
          return {
@@ -27,7 +29,8 @@
       components: {
          xlogin,
          xregister,
-         xforget
+         xforget,
+         xinfo
       },
       methods: {
          changeShow: function () {

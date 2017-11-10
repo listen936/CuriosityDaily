@@ -14,7 +14,7 @@
          <a href="#">我已阅读并同意《用户注册协议》</a>
       </div>
       <div class="form-action">
-         <a href="#" class="btn submit">下一步</a>
+         <a href="#" class="btn submit" @click="changeNum3">下一步</a>
          <a href="#" class="btn cancel close-popup">取消</a>
       </div>
       <div class="form-links clearfix">
@@ -32,6 +32,9 @@
          },
          changeNum2: function () {
             this.$store.state.switchNum = 2
+         },
+         changeNum3: function () {
+            this.$store.state.switchNum = 3
          }
       },
       computed: {
