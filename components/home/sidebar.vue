@@ -71,15 +71,11 @@
 
                      </li>
                      <li class="item ">
-                        <a @click="sideBarHide" class="nav-item">
-                           <span class="iconfont icon-2lanmu"></span>栏目中心</a>
-                     </li>
-                     <li class="item ">
                         <a @click="sideBarHide" class="nav-item" href="#/home/column">
                            <span class="iconfont icon-2lanmu"></span>栏目中心</a>
                      </li>
                      <li class="item ">
-                        <a href="#/home/labs">
+                        <a @click="sideBarHide" class="nav-item" href="#/home/labs">
                            <span class="iconfont icon-1yanjiusuo"></span>生活研究所</a>
                      </li>
                   </ul>
