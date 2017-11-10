@@ -1,33 +1,44 @@
 <template>
-	<div class="page-content" data-lastkey="1507874419">
-		<div class="com-column-list" data-initialized="true" data-guid="23">
-			<div class="container clearfix" v-scroll="loadMore">
-				<!--v-for-->
-				<a v-for="a in arr" class="com-grid-column" :id="a.id">
-					<div class="grid-column-hd" >
-						<div class="imgcover pic"><img class=" lazyloaded" :src="a.img"></div>
-						<p class="column">{{a.title}}</p>
-						<span class="subscribe iconfont icon-jiadingyue"  :isyes='a.subscription'></span></div>
-					<div class="grid-column-bd">
-						<p class="name"><span class="iconfont icon-lanmuzuozhe"></span>{{a.where}}</p>
-						<p class="text"><span class="subscribe-num">{{a.subscribeNum}}</span>人订阅, 更新至 <span class="article-num">{{a.articleNum}}</span>篇</p>
-					</div>
-				</a>
+	<div>
+		<div class="page-content" data-lastkey="1507874419">
+			<div class="com-column-list" data-initialized="true" data-guid="23">
+				<div class="container clearfix" v-scroll="loadMore">
+					<!--v-for-->
+					<a v-for="a in arr" class="com-grid-column" :id="a.id">
+						<div class="grid-column-hd">
+							<div class="imgcover pic"><img class=" lazyloaded" :src="a.img"></div>
+							<p class="column">{{a.title}}</p>
+							
+							<xspan></xspan>
+							
+						</div>
+						<div class="grid-column-bd">
+							<p class="name"><span class="iconfont icon-lanmuzuozhe"></span>{{a.where}}</p>
+							<p class="text"><span class="subscribe-num">{{a.subscribeNum}}</span>人订阅, 更新至 <span class="article-num">{{a.articleNum}}</span>篇</p>
+						</div>
+					</a>
+				</div>
 			</div>
-		</div>
-		<div class="com-loader nomore" data-guid="2" data-initialized="true">
-			<div class="loader-bd">
-				<p class="notext" v-show="!bool">没有更多啦</p>
-				<a rel="nofollow" href="#" class="btn showtext ripple" v-show="bool">加载更多</a>
-				<div class="spinner" v-show="bool">
-					<div class="bounce1"></div>
-					<div class="bounce2"></div>
-					<div class="bounce3"></div>
+			<div class="com-loader nomore" data-guid="2" data-initialized="true">
+				<div class="loader-bd">
+					<p class="notext" v-show="!bool">没有更多啦</p>
+					<a rel="nofollow" href="#" class="btn showtext ripple" v-show="bool">加载更多</a>
+					<div class="spinner" v-show="bool">
+						<div class="bounce1"></div>
+						<div class="bounce2"></div>
+						<div class="bounce3"></div>
+					</div>
 				</div>
 			</div>
 		</div>
+	
+			<div class="com-notification" style="left: 133.5px; top: 273px;opacity: 0;transition: all 1s;" >
+				<div class="notification-bd">
+					<p class="msg">取消订阅!</p>
+				</div>
+			</div>
+		
 	</div>
-
 </template>
 
 <script>
@@ -37,14 +48,14 @@
 				bool: true,
 				arr: [],
 				id: 0,
-				n:1
+				n: 1
 			}
 		},
 		methods: {
 			loadMore: function() {
 				self = this;
 				this.$http.get("../assets/json/columns.json").then(function(data) {
-					 self.arr = self.arr.concat(data.body.splice((self.n-1)*10,10));
+					self.arr = self.arr.concat(data.body.splice((self.n - 1) * 10, 10));
 					self.n = self.n + 1;
 				})
 			}
@@ -58,9 +69,37 @@
 					window.onscroll = function() {
 						if(document.documentElement.scrollTop + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
 							binding.value()
-							if(self.n >= 5) {
+							if(self.n >= 6) {
 								self.bool = false;
 							}
+						}
+					}
+				}
+			}
+		},
+		components: {
+			xspan: {
+				template: `
+					<span class="subscribe iconfont" :class="flag? 'icon-jiadingyue': 'icon-yidingyue'" @click="subscribe"></span>
+				`,
+				data() {
+					return {
+						flag: true
+					}
+				},
+				methods: {
+					subscribe: function() {
+						var oP = document.querySelector(".msg");
+						var oDiv = document.querySelector(".com-notification")
+						this.flag = !this.flag;
+						oDiv.style.opacity = 1;
+						setTimeout(function(){
+							oDiv.style.opacity = 0;
+						},3000)
+						if(this.flag){
+							oP.innerHTML = "取消订阅！"
+						}else{	
+							oP.innerHTML = "订阅成功！"
 						}
 					}
 				}
@@ -70,6 +109,17 @@
 </script>
 
 <style>
+	/*.fade-enter-active{
+		animation: change 0s;
+	}
+	.fade-leave-active{
+		animation:change 4s;
+	}
+	@keyframes change{
+		0%{opacity: 1;}
+		75%{opacity: 1;}
+		100%{opacity: 0;}
+	}*/
 	.popup-overlay {
 		position: fixed;
 		top: 0;
