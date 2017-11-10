@@ -16,9 +16,9 @@
 		</div>
 		<div class="com-loader loading " data-guid="2" data-initialized="true">
 			<div class="loader-bd">
-				<p class="notext">没有更多啦</p>
-				<a rel="nofollow" href="#" class="btn showtext ripple">加载更多</a>
-				<div class="spinner">
+				<p class="notext" :style="{display: bool?'none':'block'}">没有更多啦</p>
+				<a rel="nofollow" href="#" class="btn showtext ripple" v-show = "bool">加载更多</a>
+				<div class="spinner" v-show = "bool">
 					<div class="bounce1"></div>
 					<div class="bounce2"></div>
 					<div class="bounce3"></div>
@@ -33,7 +33,8 @@
 		data(){
 			return {
 				arr:[],
-				n:0
+				n:0,
+				bool:true
 			}
 		},
 		methods:{
@@ -42,6 +43,9 @@
 				this.$http.get("../assets/json/news.json").then(function(data){
 					self.arr = self.arr.concat(data.body.splice(self.n*10,10));
 					self.n = self.n + 1;
+					if(self.n >= 8){
+						self.bool = false;
+					}
 				})
 			}
 		},
