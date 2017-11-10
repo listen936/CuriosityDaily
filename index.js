@@ -21,6 +21,8 @@ import xcenter from './components/home/user/center.vue';
 
 //主页内容组件
 import xcontent from './components/home/content/content.vue';
+//新闻组件
+import xnews from './components/home/news/longarticle.vue';
 //栏目中心组件
 import xcolumn from "./components/home/columns/column.vue"
 //搜索组件
@@ -54,6 +56,10 @@ const router = new VueRouter({
          path: "content",
          component: xcontent
       },{
+         path: "news",
+         component: xnews
+      },
+      {
          path: "column",
          component: xcolumn
       },{
