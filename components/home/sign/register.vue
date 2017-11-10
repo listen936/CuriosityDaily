@@ -1,8 +1,4 @@
 <template>
-<<<<<<< HEAD
-=======
-
->>>>>>> cd6cd60bf30c6c5aeb1a1e1c24caebd0be5de676
 	<form class="register" :class="switchNum == 1 ? 'appear' : 'rehidden' " >
 		<div class="form-control">
 			<input type="text" placeholder="电子邮箱" v-model="email">
@@ -31,10 +27,6 @@
 			</div>
 		</div>
 	</form>
-<<<<<<< HEAD
-=======
-
->>>>>>> cd6cd60bf30c6c5aeb1a1e1c24caebd0be5de676
 </template>
 
 <script>
