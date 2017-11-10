@@ -16,10 +16,9 @@
                <div class="sidebar-panel-bd">
                   <ul class="items categories">
                      <li class="item">
-                        <a href="/mobile/homes.html" @click="sideBarHide" class="nav-item" style="color:#ffc81f;">
-                     <li class="item current">
-                        <a href="#/home">
-                           <span class="iconfont icon-logo"></span>首页</a>
+                        <a @click="sideBarHide" class="nav-item" style="color:#ffc81f;" href="#/home">
+                           <span class="iconfont icon-logo"></span>首页
+                        </a>
                      </li>
                      <li class="item news">
                         <a @click="dropdown" class="newsBtn">
@@ -76,8 +75,7 @@
                            <span class="iconfont icon-2lanmu"></span>栏目中心</a>
                      </li>
                      <li class="item ">
-                        <a @click="sideBarHide" class="nav-item">
-                        <a href="#/home/column">
+                        <a @click="sideBarHide" class="nav-item" href="#/home/column">
                            <span class="iconfont icon-2lanmu"></span>栏目中心</a>
                      </li>
                      <li class="item ">
