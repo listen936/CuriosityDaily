@@ -21,7 +21,7 @@
 			</div>
 			<div class="com-loader nomore" data-guid="2" data-initialized="true">
 				<div class="loader-bd">
-					<p class="notext" v-show="!bool">没有更多啦</p>
+					<p class="notext" :style="{display: bool?'none':'block'}">没有更多啦</p>
 					<a rel="nofollow" href="#" class="btn showtext ripple" v-show="bool">加载更多</a>
 					<div class="spinner" v-show="bool">
 						<div class="bounce1"></div>
@@ -109,17 +109,7 @@
 </script>
 
 <style>
-	/*.fade-enter-active{
-		animation: change 0s;
-	}
-	.fade-leave-active{
-		animation:change 4s;
-	}
-	@keyframes change{
-		0%{opacity: 1;}
-		75%{opacity: 1;}
-		100%{opacity: 0;}
-	}*/
+
 	.popup-overlay {
 		position: fixed;
 		top: 0;
