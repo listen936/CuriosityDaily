@@ -196,7 +196,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-pagination-bullet-active {
-   background: #007aff;
+   background: #FFC81F;
    opacity: 1;
    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
 }

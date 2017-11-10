@@ -3,11 +3,13 @@ import Vuex from "vuex";
 import VueRouter from "vue-router";
 import VueResource from "vue-resource";
 import VueCookie from "vue-cookie";
+import VueSwiper from 'vue-awesome-swiper';
 
 Vue.use(Vuex);
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(VueCookie);
+Vue.use(VueSwiper);
 
 //引入组件
 import xhome from './components/home/home.vue';
@@ -17,7 +19,7 @@ import xuser from './components/home/user/user.vue';
 import xaccount from './components/home/user/account.vue';
 import xcenter from './components/home/user/center.vue';
 
-
+//主页内容组件
 import xcontent from './components/home/content/content.vue';
 //栏目中心组件
 import xcolumn from "./components/home/columns/column.vue"
@@ -25,6 +27,7 @@ import xcolumn from "./components/home/columns/column.vue"
 import xsearch from "./components/home/search/search.vue"
 //生活研究院组件
 import xlabs from "./components/home/labs/labs.vue"
+
 
 
 const router = new VueRouter({
@@ -59,6 +62,9 @@ const router = new VueRouter({
       },{
       	path: "search",
       	component: xsearch
+      },{
+         path: "/home",
+         redirect: 'content'
       }]
    },{
       path: '/',

@@ -32,7 +32,10 @@ module.exports = {
 		}, {
 			test: /\.scss$/,
 			use: 'sass-loader'
-		}]
+		}, {
+         test: /\.less$/,
+         use: 'less-loader'
+      }]
 	},
 	resolve: {
 		alias: {
