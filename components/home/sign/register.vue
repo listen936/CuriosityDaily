@@ -1,5 +1,5 @@
 <template>
-   <form class="register" :class="switchNum == 1 ? 'appear' : 'rehidden' " action="">
+   <form class="register" :class="switchNum == 1 ? 'appear' : 'rehidden' " action="/user/register">
       <div class="form-control">
          <input type="text" name="email" placeholder="电子邮箱" v-model="username" onblur="confirm">
       </div>
