@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div v-for="a in arr1">
+		<div v-for="a in arr1" v-scroll="loadMore">
 			<div class="packery-item single">
 				<a href="/mobile/articles/47108.html" class="com-grid-key-article" data-initialized="true" data-guid="25">
 					<div class="grid-key-article-hd">
@@ -9,7 +9,7 @@
 					<div class="grid-key-article-bd">
 						<p class="category"> <span :class="a.icon"></span> <span>{{a.icon1}}</span> </p>
 						<h1 class="title">{{a.desc}}</h1>
-						<div class="ribbon"> <span	:class="a.vx">{{a.vx1}}</span> <span :class="a.red">{{a.red1}}</span> </div>
+						<div class="ribbon"> <span :class="a.vx">{{a.vx1}}</span> <span :class="a.red">{{a.red1}}</span> </div>
 					</div>
 				</a>
 			</div>
@@ -25,33 +25,54 @@
 				</a>
 			</div>
 		</div>
+		<div class="com-loader loading " data-guid="3" data-initialized="true">
+			<div class="loader-bd">
+				<p class="notext">没有更多啦</p>
+				<a rel="nofollow" href="#" class="btn showtext ripple">加载更多</a>
+				<div class="spinner">
+					<div class="bounce1"></div>
+					<div class="bounce2"></div>
+					<div class="bounce3"></div>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
 <script>
-	import $ from "jquery";
 	export default {
 		data() {
 			return {
-				arr1: []
+				arr1: [],
+				n: 1
 			}
 		},
 		methods: {
 			loadMore: function() {
-				var self = this;
-				$.ajax({
-					url: "../assets/json/mix.json",
-					type: "GET",
-					async: true,
-					success: function(data) {
-						console.log(data)
-						self.arr1 = self.arr1.concat(data);
-					}
+				self = this;
+				this.$http.get("../assets/json/mix.json").then(function(data) {
+					setTimeout(function() {
+						self.arr1 = self.arr1.concat(data.body.splice((self.n - 1) * 1, 1));
+						self.n = self.n + 1;
+					}, 2000)
 				})
 			}
 		},
-		mounted() {
+		mounted: function() {
 			this.loadMore()
+		},
+		directives: {
+			scroll: {
+				bind: function(el, binding) {
+					window.onscroll = function() {
+						if(document.documentElement.scrollTop + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+							binding.value()
+
+						}
+					}
+				}
+
+			}
 		}
 	}
 </script>
