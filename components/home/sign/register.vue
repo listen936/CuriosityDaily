@@ -1,4 +1,5 @@
 <template>
+
 	<form class="register" :class="switchNum == 1 ? 'appear' : 'rehidden' " >
 		<div class="form-control">
 			<input type="text" placeholder="电子邮箱" v-model="email">
@@ -27,6 +28,7 @@
 			</div>
 		</div>
 	</form>
+
 </template>
 
 <script>
