@@ -16,7 +16,7 @@
                <div class="sidebar-panel-bd">
                   <ul class="items categories">
                      <li class="item current">
-                        <a href="/mobile/homes.html">
+                        <a href="#/home">
                            <span class="iconfont icon-logo"></span>首页</a>
                      </li>
                      <li class="item news">
@@ -70,11 +70,11 @@
 
                      </li>
                      <li class="item ">
-                        <a href="/mobile/special_columns.html">
+                        <a href="#/home/column">
                            <span class="iconfont icon-2lanmu"></span>栏目中心</a>
                      </li>
                      <li class="item ">
-                        <a href="/mobile/labs.html">
+                        <a href="#/home/labs">
                            <span class="iconfont icon-1yanjiusuo"></span>生活研究所</a>
                      </li>
                   </ul>
@@ -82,7 +82,7 @@
             </div>
          </div>
          <div class="sidebar-panel-ft">
-            <a href="/mobile/searches" class="search">
+            <a href="#/home/search" class="search">
                <div class="mock-input">搜索</div>
                <span class="iconfont icon-search"></span>
             </a>
