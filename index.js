@@ -34,7 +34,7 @@ const router = new VueRouter({
    routes: [{
       path: "/article",
       component: xarticle
-   },{
+   }, {
       path: "/home",
       component: xhome,
       children: [{
@@ -43,30 +43,30 @@ const router = new VueRouter({
          children: [{
             path: "account",
             component: xaccount
-         },{
+         }, {
             path: "center",
             component: xcenter
-         },{
+         }, {
             path: 'user',
             redirect: 'center'
          }]
-      },{
+      }, {
          path: "content",
          component: xcontent
-      },{
+      }, {
          path: "column",
          component: xcolumn
-      },{
+      }, {
          path: "labs",
          component: xlabs
-      },{
-      	path: "search",
-      	component: xsearch
-      },{
+      }, {
+         path: "search",
+         component: xsearch
+      }, {
          path: "/home",
          redirect: 'content'
       }]
-   },{
+   }, {
       path: '/',
       redirect: '/home'
    }]
@@ -74,7 +74,7 @@ const router = new VueRouter({
 
 const store = new Vuex.Store({
    state: {
-      signShow:false,
+      signShow: false,
       switchNum: 0
    }
 });
@@ -92,6 +92,6 @@ new Vue({
 	`,
    components: {
       xarticle,
-      xhome,    
+      xhome,
    }
 });
