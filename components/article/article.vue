@@ -3,7 +3,9 @@
 		<div class="menu-overlay"></div>
 		<div class="com-header-brief clearfix" data-islogined="false" data-id="47038" data-guid="0" data-initialized="true">
 			<a class="header-brief-left clearfix" href="#/home" data-ga-event="mobile:click:logo">
-				<div class="logo"><img src="./images/articlelogo.png" alt=""></div>
+				<div class="logo">
+					<img src="./images/articlelogo.png" alt="">
+				</div>
 				<div class="title-slogan">
 					<h1>{{title}}</h1>
 					<p>{{desc}}</p>
@@ -18,18 +20,27 @@
 			<div class="com-article-detail short" data-categoryid="4" data-initialized="true" data-guid="3">
 				<div class="article-detail-hd">
 					<div class="category-tags clearfix">
-						<a href="/mobile/categories/4.html" class="category black clearfix x25" data-id="4"><span class="iconfont icon-zhineng-bg"></span> <span>智能</span></a>
+						<a href="/mobile/categories/4.html" class="category black clearfix x25" data-id="4">
+							<span class="iconfont icon-zhineng-bg"></span> 
+							<span>智能</span></a>
 						<ul class="tags items clearfix" style="display: block;">
 							<li class="tag item" data-id="29"><span data-id="29">Top 15</span></li>
 							<li class="tag item" data-id="533"><span data-id="533">iOS</span></li>
 							<li class="tag item" data-id="68"><span data-id="68">苹果</span></li>
 						</ul>
 					</div>
-					<h1 class="title">iOS 11 推出近两个月，还有一半用户在用老系统</h1>
+					<h1 class="title">{{title1}}</h1>
 					<div class="author-date clearfix">
-						<div class="author clearfix"> <span class="avatar x25 circle"><img src="http://img.qdaily.com/user/face/20160702195030hOv4xzGADt1NU9ZX.jpg?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1" alt=""> </span> <span class="name">周韶宏</span></div> <span class="date smart-date" data-origindate="2017-11-09 07:10:41 +0800">1 小时前</span></div>
-					<div class="banner"><img src="http://img.qdaily.com/article/article_show/201711081344004gw3q6mVWlKoBHej.JPG?imageMogr2/auto-orient/thumbnail/!580x344r/gravity/Center/crop/580x344/quality/85/format/jpg/ignore-error/1" alt=""></div>
-					<div class="com-share" data-id="47038" data-title="《iOS 11 推出近两个月，还有一半用户在用老系统》，来自@好奇心日报" data-pic="http://img.qdaily.com/article/article_show/201711081344004gw3q6mVWlKoBHej.JPG?imageMogr2/auto-orient/thumbnail/!640x380r/gravity/Center/crop/640x380/quality/85/format/jpg/ignore-error/1" data-url="http://m.qdaily.com/mobile/articles/47038.html" data-weiboappkey="2462590045" data-initialized="true" data-guid="1">
+						<div class="author clearfix"> 
+							<span class="avatar x25 circle"><img src="./images/people.jpg" alt=""> </span>
+							<span class="name">周韶宏</span>
+						</div> 
+						<span class="date smart-date" data-origindate="2017-11-09 07:10:41 +0800">1 小时前</span>
+					</div>
+					<div class="banner">
+						<img src="./images/iPhone.jpg" alt="">
+					</div>
+					<div class="com-share" data-id="47038" data-title="" data-pic="" data-url="" data-weiboappkey="2462590045" data-initialized="true" data-guid="1">
 						<div class="share-bd clearfix">
 							<a data-ga-event="mobile:share:weibo" href="#" class="share iconfont icon-weibo"></a>
 							<a data-ga-event="mobile:share:tengxunweibo" href="#" class="share iconfont icon-tengxunweibo"></a>
@@ -40,42 +51,44 @@
 					</div>
 				</div>
 				<div class="article-detail-bd">
-					<div class="excerpt"> 新操作系统的吸引力不及以往。 </div>
+					<div class="excerpt"> {{title2}} </div>
 					<div class="detail">
-
-						<p finallycleanhtml="true" nocleanhtml="true">和 iPhone X 相比，苹果用户对新操作系统 iOS 11 的热情远没有那么高。</p>
-						<p>苹果周二更新了 App Store Support 页面，公布了一组 iOS 系统
-							<a href="https://developer.apple.com/support/app-store/" rel="nofollow">安装率的数字</a>。截止目前，iOS 用户中有 52% 安装了 iOS 11，有 38% 的用户还在使用去年的 iOS 10。</p>
+						<p finallycleanhtml="true" nocleanhtml="true">{{p1}}</p>
+						<p>{{p2}}</p>
 						<div class="com-insert-images">
-							<figure style="margin: 0px;"> <img data-ratio="1.331395" data-format="png" class=" lazyloaded" data-src="http://img.qdaily.com/uploads/201711081346144EO5pXVwW7LoDZCs.png-WebpMobileW550" src="http://img.qdaily.com/uploads/201711081346144EO5pXVwW7LoDZCs.png-WebpMobileW550" style="height: 499.273px;"> </figure>
+							<figure style="margin: 0px;"> 
+								<img data-ratio="1.331395" data-format="png" class=" lazyloaded" data-src="" src="./images/radius.png" style="height: 499.273px;"> 
+							</figure>
 						</div>
-						<p>iOS 11 从 9 月 20 日正式推送，也就是说一个半月过去仍然有近一半的 iPhone 还停留在旧系统，尽管不升级的话苹果会不断向你推送通知。</p>
-						<p>这个更新速度要低于去年同一时间段。新 iOS 一般在 9 月中旬推出，去年库克在 10 月底的 MacBook 发布会上表示 iOS 10 的采用率已经
-							<a href="http://www.idownloadblog.com/2016/11/29/ios-10-adoption-rate-slowly-climbs-to-63/" rel="nofollow">超过 60%</a>；再上一年苹果在 11 月 16 日公布 iOS 9 采用率是 67%，并且说更新率“超过以往的快”。</p>
-						<p>新版本 iOS 的更新速度正在放慢，第三方数据也证实了这点。市场调研机构
-							<a href="https://mixpanel.com/trends/#report/ios_11/from_date:-420,report_unit:day,to_date:-373" rel="nofollow">mixpanel </a>追踪了 iOS 11 推出后的安装率，第一周这个数字只有 25%，第二周为 38.5%。相比之下 iOS 10 在去年同期高出 10%。</p>
+						<p>{{p3}}</p>
+						<p>{{p4}}</p>
+						<p>{{p5}}</p>
 						<div class="com-insert-images">
-							<figure style="margin: 0px;"> <img data-ratio="0.482966" data-format="png" class=" lazyloaded" data-src="http://img.qdaily.com/uploads/20171108134633JqLnbpaCdPz6Rytm.png-WebpMobileW550" src="http://img.qdaily.com/uploads/20171108134633JqLnbpaCdPz6Rytm.png-WebpMobileW550" style="height: 181.112px;"> </figure>
+							<figure style="margin: 0px;"> 
+								<img data-ratio="0.482966" data-format="png" class=" lazyloaded" data-src="" src="./images/Rytm1.png" style="height: 181.112px;"> 
+							</figure>
 						</div>
 						<div class="com-insert-images">
-							<figure style="margin: 0px;"> <img data-ratio="0.492370" data-format="png" class=" lazyloaded" data-src="http://img.qdaily.com/uploads/20171108134647ePGio6jghWuDK2UA.png-WebpMobileW550" src="http://img.qdaily.com/uploads/20171108134647ePGio6jghWuDK2UA.png-WebpMobileW550" style="height: 184.639px;"> </figure>
+							<figure style="margin: 0px;"> 
+								<img data-ratio="0.492370" data-format="png" class=" lazyloaded" data-src="" src="./images/Rytm2.png" style="height: 184.639px;">
+							</figure>
 						</div>
-						<p>mixpanel 的数据并不准确，显示目前有超过 60% 的设备安装了 iOS 11，比苹果的官方数据高，所以 iOS 11 实际的更新速度还会更慢。</p>
-						<p>iOS 11 在外观上的变化并不明显，没有几年前苹果从“拟物设计”到“扁平设计”的巨大视觉冲击，但也做了超过
-							<a href="http://www.qdaily.com/articles/45124.html">100 项的细节更新</a>，包括全新设计的控制中心、动态特效、文件管理应用……</p>
-						<p>对于不同产品 iOS 11 也有优化，iPhone X 取消了 Home 键、用一个沉在底部的横条取代，像是退出应用这样基本的操作都被改变了；iPad 上的 iOS 11 增加了 Dock 栏，像 Mac 一样可以快速启动和切换应用。</p>
-						<p>针对中国市场苹果还在最新测试版更新了 100 多项中文名翻译，Wallet 改名“钱包”、AirDrop 改名“隔空投送”……</p>
-						<p>这些改动都增加了 iOS 的复杂程度。现在看来这并没有十分奏效。</p>
-						<p>这可能和 iOS 11 并不流畅的体验有关，虽然没什么大问题，但 iOS 11 各种小 Bug 不断。比如用原生键盘每次输入 I 字母，会显示出 A 字母，也有人发现计算机输入 1+2+3 不等于 6 而是直接等于 24。</p>
-						<p>更多的人反映自己的设备装上 iOS 11 会卡顿、应用闪退、耗电加快，也有人总结了一些
-							<a href="http://osxdaily.com/2017/10/06/ios-11-slow-speed-up-performance/" rel="nofollow">小技巧</a>教你尽可能缓解症状。</p>
-						<p>目前正式版只更新了到 iOS 11.1 ，这些问题只能等到下一个版本解决。</p>
-						<p>另外 iOS 11 最初版本取消了 3D Touch 手势——用力滑动屏幕左侧边缘启动多任务管理界面。这个举动在社交网络收到不少负面评价，虽然之后又被恢复。</p>
+						<p>{{p6}}</p>
+						<p>{{p7}}</p>
+						<p>{{p8}}</p>
+						<p>{{p9}}</p>
+						<p>{{p10}}</p>
+						<p>{{p11}}</p>
+						<p>{{p12}}</p>
+						<p>{{p13}}</p>
+						<p>{{p14}}</p>
 						<p class=""><br></p>
-						<p>题图由好奇心日报拍摄</p>
+						<p>{{p15}}</p>
 
 					</div>
 				</div>
+
+
 				<div class="article-detail-ft">
 					<ul class="tags items clearfix">
 						<li class="tag item" data-id="29"><span data-id="29">Top 15</span></li>
@@ -84,13 +97,13 @@
 						<li class="tag item" data-id="43951"><span data-id="43951">iPhone X</span></li>
 					</ul>
 					<div class="share-wrapper clearfix"><span class="text">分享至：</span>
-						<div class="com-share" data-id="47038" data-title="《iOS 11 推出近两个月，还有一半用户在用老系统》，来自@好奇心日报" data-pic="http://img.qdaily.com/article/article_show/201711081344004gw3q6mVWlKoBHej.JPG?imageMogr2/auto-orient/thumbnail/!640x380r/gravity/Center/crop/640x380/quality/85/format/jpg/ignore-error/1" data-url="http://m.qdaily.com/mobile/articles/47038.html?source=flipboard" data-weiboappkey="2462590045" data-initialized="true" data-guid="2">
+						<div class="com-share" data-id="47038" data-title="" data-pic="#" data-url="" data-weiboappkey="2462590045" data-initialized="true" data-guid="2">
 							<div class="share-bd clearfix">
-								<a data-ga-event="mobile:share:weibo" href="http://service.weibo.com/share/share.php?title=%E3%80%8AiOS%2011%20%E6%8E%A8%E5%87%BA%E8%BF%91%E4%B8%A4%E4%B8%AA%E6%9C%88%EF%BC%8C%E8%BF%98%E6%9C%89%E4%B8%80%E5%8D%8A%E7%94%A8%E6%88%B7%E5%9C%A8%E7%94%A8%E8%80%81%E7%B3%BB%E7%BB%9F%E3%80%8B%EF%BC%8C%E6%9D%A5%E8%87%AA%40%E5%A5%BD%E5%A5%87%E5%BF%83%E6%97%A5%E6%8A%A5&amp;url=http%3A%2F%2Fm.qdaily.com%2Fmobile%2Farticles%2F47038.html%3Fsource%3Dflipboard&amp;pic=http%3A%2F%2Fimg.qdaily.com%2Farticle%2Farticle_show%2F201711081344004gw3q6mVWlKoBHej.JPG%3FimageMogr2%2Fauto-orient%2Fthumbnail%2F!640x380r%2Fgravity%2FCenter%2Fcrop%2F640x380%2Fquality%2F85%2Fformat%2Fjpg%2Fignore-error%2F1&amp;appkey=2462590045" class="share iconfont icon-weibo"></a>
-								<a data-ga-event="mobile:share:tengxunweibo" href="http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;title=%E3%80%8AiOS%2011%20%E6%8E%A8%E5%87%BA%E8%BF%91%E4%B8%A4%E4%B8%AA%E6%9C%88%EF%BC%8C%E8%BF%98%E6%9C%89%E4%B8%80%E5%8D%8A%E7%94%A8%E6%88%B7%E5%9C%A8%E7%94%A8%E8%80%81%E7%B3%BB%E7%BB%9F%E3%80%8B%EF%BC%8C%E6%9D%A5%E8%87%AA%40%E5%A5%BD%E5%A5%87%E5%BF%83%E6%97%A5%E6%8A%A5&amp;url=http%3A%2F%2Fm.qdaily.com%2Fmobile%2Farticles%2F47038.html%3Fsource%3Dflipboard&amp;pic=http%3A%2F%2Fimg.qdaily.com%2Farticle%2Farticle_show%2F201711081344004gw3q6mVWlKoBHej.JPG%3FimageMogr2%2Fauto-orient%2Fthumbnail%2F!640x380r%2Fgravity%2FCenter%2Fcrop%2F640x380%2Fquality%2F85%2Fformat%2Fjpg%2Fignore-error%2F1" class="share iconfont icon-tengxunweibo"></a>
-								<a data-ga-event="mobile:share:kongjian" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?title=%E3%80%8AiOS%2011%20%E6%8E%A8%E5%87%BA%E8%BF%91%E4%B8%A4%E4%B8%AA%E6%9C%88%EF%BC%8C%E8%BF%98%E6%9C%89%E4%B8%80%E5%8D%8A%E7%94%A8%E6%88%B7%E5%9C%A8%E7%94%A8%E8%80%81%E7%B3%BB%E7%BB%9F%E3%80%8B%EF%BC%8C%E6%9D%A5%E8%87%AA%40%E5%A5%BD%E5%A5%87%E5%BF%83%E6%97%A5%E6%8A%A5&amp;url=http%3A%2F%2Fm.qdaily.com%2Fmobile%2Farticles%2F47038.html%3Fsource%3Dflipboard&amp;pics=http%3A%2F%2Fimg.qdaily.com%2Farticle%2Farticle_show%2F201711081344004gw3q6mVWlKoBHej.JPG%3FimageMogr2%2Fauto-orient%2Fthumbnail%2F!640x380r%2Fgravity%2FCenter%2Fcrop%2F640x380%2Fquality%2F85%2Fformat%2Fjpg%2Fignore-error%2F1&amp;summary=" class="share iconfont icon-kongjian"></a>
-								<a data-ga-event="mobile:share:douban" href="http://www.douban.com/share/service?name=%E3%80%8AiOS%2011%20%E6%8E%A8%E5%87%BA%E8%BF%91%E4%B8%A4%E4%B8%AA%E6%9C%88%EF%BC%8C%E8%BF%98%E6%9C%89%E4%B8%80%E5%8D%8A%E7%94%A8%E6%88%B7%E5%9C%A8%E7%94%A8%E8%80%81%E7%B3%BB%E7%BB%9F%E3%80%8B%EF%BC%8C%E6%9D%A5%E8%87%AA%40%E5%A5%BD%E5%A5%87%E5%BF%83%E6%97%A5%E6%8A%A5&amp;href=http%3A%2F%2Fm.qdaily.com%2Fmobile%2Farticles%2F47038.html%3Fsource%3Dflipboard&amp;image=http%3A%2F%2Fimg.qdaily.com%2Farticle%2Farticle_show%2F201711081344004gw3q6mVWlKoBHej.JPG%3FimageMogr2%2Fauto-orient%2Fthumbnail%2F!640x380r%2Fgravity%2FCenter%2Fcrop%2F640x380%2Fquality%2F85%2Fformat%2Fjpg%2Fignore-error%2F1&amp;text=%E3%80%8AiOS%2011%20%E6%8E%A8%E5%87%BA%E8%BF%91%E4%B8%A4%E4%B8%AA%E6%9C%88%EF%BC%8C%E8%BF%98%E6%9C%89%E4%B8%80%E5%8D%8A%E7%94%A8%E6%88%B7%E5%9C%A8%E7%94%A8%E8%80%81%E7%B3%BB%E7%BB%9F%E3%80%8B%EF%BC%8C%E6%9D%A5%E8%87%AA%40%E5%A5%BD%E5%A5%87%E5%BF%83%E6%97%A5%E6%8A%A5" class="share iconfont icon-douban"></a>
-								<a data-ga-event="mobile:share:linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;ro=true&amp;title=%E3%80%8AiOS%2011%20%E6%8E%A8%E5%87%BA%E8%BF%91%E4%B8%A4%E4%B8%AA%E6%9C%88%EF%BC%8C%E8%BF%98%E6%9C%89%E4%B8%80%E5%8D%8A%E7%94%A8%E6%88%B7%E5%9C%A8%E7%94%A8%E8%80%81%E7%B3%BB%E7%BB%9F%E3%80%8B%EF%BC%8C%E6%9D%A5%E8%87%AA%40%E5%A5%BD%E5%A5%87%E5%BF%83%E6%97%A5%E6%8A%A5&amp;url=http%3A%2F%2Fm.qdaily.com%2Fmobile%2Farticles%2F47038.html%3Fsource%3Dflipboard&amp;summary=&amp;source=&amp;armin=armin" class="share iconfont icon-linkedin"></a>
+								<a data-ga-event="mobile:share:weibo" href="#" class="share iconfont icon-weibo"></a>
+								<a data-ga-event="mobile:share:tengxunweibo" href="#" class="share iconfont icon-tengxunweibo"></a>
+								<a data-ga-event="mobile:share:kongjian" href="#" class="share iconfont icon-kongjian"></a>
+								<a data-ga-event="mobile:share:douban" href="#" class="share iconfont icon-douban"></a>
+								<a data-ga-event="mobile:share:linkedin" href="#" class="share iconfont icon-linkedin"></a>
 							</div>
 						</div>
 					</div>
@@ -100,9 +113,11 @@
 			<div class="com-related-banners" data-initialized="true" data-guid="6">
 				<div class="related-banners-bd">
 					<div class="gap"></div>
-					<a href="/mobile/articles/45959.html" class="com-grid-key-article" data-initialized="true" data-guid="4">
+					<a href="#" class="com-grid-key-article" data-initialized="true" data-guid="4">
 						<div class="grid-key-article-hd">
-							<div class="imgcover pic"><img class=" lazyloaded" data-src="http://img.qdaily.com/article/article_show/20171010143647YCnFwpOyI4jHqaoP.jpg?imageMogr2/auto-orient/thumbnail/!480x293r/gravity/Center/crop/480x293/quality/85/format/webp/ignore-error/1" alt="iOS 11 小幅更新，多任务手势回来了" src="http://img.qdaily.com/article/article_show/20171010143647YCnFwpOyI4jHqaoP.jpg?imageMogr2/auto-orient/thumbnail/!480x293r/gravity/Center/crop/480x293/quality/85/format/webp/ignore-error/1"></div>
+							<div class="imgcover pic">
+								<img class=" lazyloaded" data-src="" alt="" src="http://img.qdaily.com/article/article_show/20171010143647YCnFwpOyI4jHqaoP.jpg?imageMogr2/auto-orient/thumbnail/!480x293r/gravity/Center/crop/480x293/quality/85/format/webp/ignore-error/1">
+							</div>
 						</div>
 						<div class="grid-key-article-bd">
 							<p class="category"> <span class="iconfont icon-zhineng"></span> <span>智能</span> </p>
@@ -111,9 +126,11 @@
 						</div>
 					</a>
 					<div class="gap"></div>
-					<a href="/mobile/articles/45124.html" class="com-grid-key-article" data-initialized="true" data-guid="5">
+					<a href="#" class="com-grid-key-article" data-initialized="true" data-guid="5">
 						<div class="grid-key-article-hd">
-							<div class="imgcover pic"><img class=" lazyloaded" data-src="http://img.qdaily.com/article/article_show/20170913065346f5a7VRQlENdSL2qr.jpg?imageMogr2/auto-orient/thumbnail/!480x293r/gravity/Center/crop/480x293/quality/85/format/webp/ignore-error/1" alt="iOS 11 正式版即将到来，这里有 30 个值得关注的变化" src="http://img.qdaily.com/article/article_show/20170913065346f5a7VRQlENdSL2qr.jpg?imageMogr2/auto-orient/thumbnail/!480x293r/gravity/Center/crop/480x293/quality/85/format/webp/ignore-error/1"></div>
+							<div class="imgcover pic">
+								<img class=" lazyloaded" data-src="" alt="iOS 11 正式版即将到来，这里有 30 个值得关注的变化" src="http://img.qdaily.com/article/article_show/20170913065346f5a7VRQlENdSL2qr.jpg?imageMogr2/auto-orient/thumbnail/!480x293r/gravity/Center/crop/480x293/quality/85/format/webp/ignore-error/1">
+							</div>
 						</div>
 						<div class="grid-key-article-bd">
 							<p class="category"> <span class="iconfont icon-zhineng"></span> <span>智能</span> </p>
@@ -130,170 +147,29 @@
 			<div class="related-comments-brief-bd">
 				<p class="count" style="visibility: visible;">36条评论</p>
 				<div class="items comments" data-lastkey="1510192732">
-					<div class="com-comment clearfix" data-commentid="560042">
+					<div class="com-comment clearfix" data-commentid="560042" v-for="a in arr">
 						<div class="comment-left">
-
 							<a href="javascript:void(0)" class="avatar circle x35">
-								<img class=" lazyloaded" data-src="http://img.qdaily.com/user/face/20170320151921WmqAfiX8dMYUGRHI.JPG?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1" alt="zlaong" src="http://img.qdaily.com/user/face/20170320151921WmqAfiX8dMYUGRHI.JPG?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1">
+								<img class=" lazyloaded" data-src="" alt="zlaong" :src="a.src">
 							</a>
-
 						</div>
 						<div class="comment-right">
 							<div class="name-date">
-
-								<a href="javascript:void(0)" class="name">zlaong</a>
-
-								<span class="date smart-date" data-origindate="2017-11-09 10:35:38 +0800">刚刚</span>
+								<a href="javascript:void(0)" class="name">{{a.username}}</a>
+								<span class="date smart-date" data-origindate="2017-11-09 10:35:38 +0800">{{a.Time}}</span>
 								<div class="ribbon">
-									<span class="iconfont icon-message"></span>
-									<span class="iconfont icon-praise"></span>
+									<span class="iconfont icon-message">{{a.reply}}</span>
+									<span class="iconfont icon-praise">{{a.praise}}</span>
 								</div>
 							</div>
-							<p class="comment-text">手表升级了os4 也卡出翔，每天打开体能训练就是一个痛苦的过程，宣传视频是做得好，但是能在30s内打开体能训练里的正在播放，就算我输，这才去年的设备就成这球样了。</p>
-
-							<div class="replies">
-
-							</div>
+							<p class="comment-text">{{a.content}}</p>
+							<div class="replies"></div>
 						</div>
 					</div>
-
-					<div class="com-comment clearfix" data-commentid="560033">
-						<div class="comment-left">
-
-							<a href="javascript:void(0)" class="avatar circle x35">
-								<img class=" lazyloaded" data-src="http://img.qdaily.com/user/face/20161205171213XrOe5LqPgUGpNi17.jpg?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1" alt="Charsling" src="http://img.qdaily.com/user/face/20161205171213XrOe5LqPgUGpNi17.jpg?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1">
-							</a>
-
-						</div>
-						<div class="comment-right">
-							<div class="name-date">
-
-								<a href="javascript:void(0)" class="name">Charsling</a>
-
-								<span class="date smart-date" data-origindate="2017-11-09 10:20:27 +0800">刚刚</span>
-								<div class="ribbon">
-									<span class="iconfont icon-message"></span>
-									<span class="iconfont icon-praise">1</span>
-								</div>
-							</div>
-							<p class="comment-text">9.3.5路过～顺带提一句，iOS 11超过60%的安装率这应该得益于三款新机。</p>
-
-							<div class="replies">
-
-							</div>
-						</div>
-					</div>
-
-					<div class="com-comment clearfix" data-commentid="560028">
-						<div class="comment-left">
-
-							<a href="javascript:void(0)" class="avatar circle x35">
-								<img class=" lazyloaded" data-src="http://img.qdaily.com/user/face/20170706235704olPrjOMDItBN9uLT.jpg?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1" alt="止步梦中" src="http://img.qdaily.com/user/face/20170706235704olPrjOMDItBN9uLT.jpg?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1">
-							</a>
-
-						</div>
-						<div class="comment-right">
-							<div class="name-date">
-
-								<a href="javascript:void(0)" class="name">止步梦中</a>
-
-								<span class="date smart-date" data-origindate="2017-11-09 10:15:53 +0800">31 分钟前</span>
-								<div class="ribbon">
-									<span class="iconfont icon-message"></span>
-									<span class="iconfont icon-praise">1</span>
-								</div>
-							</div>
-							<p class="comment-text">iOS 11只更新了一个功能：变卡</p>
-
-							<div class="replies">
-
-							</div>
-						</div>
-					</div>
-
-					<div class="com-comment clearfix" data-commentid="560023">
-						<div class="comment-left">
-
-							<a href="javascript:void(0)" class="avatar circle x35">
-								<img class=" lazyloaded" data-src="http://img.qdaily.com/user/face/201612241736337xeTIu4hOa9R61CK.jpg?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1" alt="梵不高" src="http://img.qdaily.com/user/face/201612241736337xeTIu4hOa9R61CK.jpg?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1">
-							</a>
-
-						</div>
-						<div class="comment-right">
-							<div class="name-date">
-
-								<a href="javascript:void(0)" class="name">梵不高</a>
-
-								<span class="date smart-date" data-origindate="2017-11-09 10:11:51 +0800">35 分钟前</span>
-								<div class="ribbon">
-									<span class="iconfont icon-message"></span>
-									<span class="iconfont icon-praise">2</span>
-								</div>
-							</div>
-							<p class="comment-text">要不是我犯二，我也在老版本</p>
-
-							<div class="replies">
-
-							</div>
-						</div>
-					</div>
-
-					<div class="com-comment clearfix" data-commentid="560006">
-						<div class="comment-left">
-
-							<a href="javascript:void(0)" class="avatar circle x35">
-								<img class=" lazyloaded" data-src="http://img.qdaily.com/user/face/20171109100040Csd8SENY2ymlGrgb.jpg?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1" alt="猫爪印" src="http://img.qdaily.com/user/face/20171109100040Csd8SENY2ymlGrgb.jpg?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1">
-							</a>
-
-						</div>
-						<div class="comment-right">
-							<div class="name-date">
-
-								<a href="javascript:void(0)" class="name">猫爪印</a>
-
-								<span class="date smart-date" data-origindate="2017-11-09 09:58:52 +0800">48 分钟前</span>
-								<div class="ribbon">
-									<span class="iconfont icon-message">1</span>
-									<span class="iconfont icon-praise">1</span>
-								</div>
-							</div>
-							<p class="comment-text">为了催生新的机型购买需求，将系统做得越来越“胖”，越来越烧硬件，这样一味追逐利益，还是乔帮主在生时的企业宗旨么？库克，你要不要回答一下！？</p>
-
-							<div class="replies">
-
-								<div class="com-reply clearfix" data-commentid="560029">
-									<div class="reply-left">
-
-										<a href="javascript:void(0)" class="avatar circle x35">
-											<img class="lazyload" data-src="http://m.qdaily.com/images/missing_face.png" alt="luluuulu4848">
-										</a>
-
-									</div>
-									<div class="reply-right">
-										<div class="name-date">
-
-											<a href="javascript:void(0)" class="name">luluuulu4848</a>
-
-											<span class="date smart-date" data-origindate="2017-11-09 10:16:08 +0800">31 分钟前</span>
-											<div class="ribbon">
-												<span class="iconfont icon-message"></span>
-												<span class="iconfont icon-praise"></span>
-											</div>
-										</div>
-										<p class="reply-text">
-
-											@猫爪印 应该去微博上艾特一下∠( ᐛ 」∠)＿
-
-										</p>
-									</div>
-								</div>
-
-							</div>
-						</div>
-					</div>
+					
 				</div>
 				<div class="callup-button">
-					<a data-ga-event="mobile:click:seeMore" data-id="47038" href="#" class="btn">打开好奇心，查看更多评论</a>
+					<a data-ga-event="mobile:click:seeMore" data-id="47038" href="#" class="btn">{{Qdaily}}</a>
 				</div>
 			</div>
 		</div>
@@ -305,7 +181,62 @@
 		data(){
 			return {
 				title: '好奇心日报',
-				desc: '好奇驱动你的世界'
+				title1: 'iOS 11 推出近两个月，还有一半用户在用老系统',
+				title2: '新操作系统的吸引力不及以往。',
+				desc: '好奇驱动你的世界',
+				p1: '和 iPhone X 相比，苹果用户对新操作系统 iOS 11 的热情远没有那么高。',
+				p2: '苹果周二更新了 App Store Support 页面，公布了一组 iOS 系统安装率的数字。截止目前，iOS 用户中有 52% 安装了 iOS 11，有 38% 的用户还在使用去年的 iOS 10。',
+				p3: 'iOS 11 从 9 月 20 日正式推送，也就是说一个半月过去仍然有近一半的 iPhone 还停留在旧系统，尽管不升级的话苹果会不断向你推送通知。',
+				p4: '这个更新速度要低于去年同一时间段。新 iOS 一般在 9 月中旬推出，去年库克在 10 月底的 MacBook 发布会上表示 iOS 10 的采用率已经超过 60%；再上一年苹果在 11 月 16 日公布 iOS 9 采用率是 67%，并且说更新率“超过以往的快”。',
+				p5: '新版本 iOS 的更新速度正在放慢，第三方数据也证实了这点。市场调研机构mixpanel 追踪了 iOS 11 推出后的安装率，第一周这个数字只有 25%，第二周为 38.5%。相比之下 iOS 10 在去年同期高出 10%。',
+				p6: 'mixpanel 的数据并不准确，显示目前有超过 60% 的设备安装了 iOS 11，比苹果的官方数据高，所以 iOS 11 实际的更新速度还会更慢。',
+				p7: 'iOS 11 在外观上的变化并不明显，没有几年前苹果从“拟物设计”到“扁平设计”的巨大视觉冲击，但也做了超过100 项的细节更新，包括全新设计的控制中心、动态特效、文件管理应用……',
+				p8: '对于不同产品 iOS 11 也有优化，iPhone X 取消了 Home 键、用一个沉在底部的横条取代，像是退出应用这样基本的操作都被改变了；iPad 上的 iOS 11 增加了 Dock 栏，像 Mac 一样可以快速启动和切换应用。',
+				p9: '针对中国市场苹果还在最新测试版更新了 100 多项中文名翻译，Wallet 改名“钱包”、AirDrop 改名“隔空投送”……',
+				p10: '这些改动都增加了 iOS 的复杂程度。现在看来这并没有十分奏效。',
+				p11: '这可能和 iOS 11 并不流畅的体验有关，虽然没什么大问题，但 iOS 11 各种小 Bug 不断。比如用原生键盘每次输入 I 字母，会显示出 A 字母，也有人发现计算机输入 1+2+3 不等于 6 而是直接等于 24。',
+				p12: '更多的人反映自己的设备装上 iOS 11 会卡顿、应用闪退、耗电加快，也有人总结了一些小技巧教你尽可能缓解症状。',
+				p13: '目前正式版只更新了到 iOS 11.1 ，这些问题只能等到下一个版本解决。',
+				p14: '另外 iOS 11 最初版本取消了 3D Touch 手势——用力滑动屏幕左侧边缘启动多任务管理界面。这个举动在社交网络收到不少负面评价，虽然之后又被恢复。',
+				p15: '题图由好奇心日报拍摄',
+				arr: [{
+					src: '../components/article/images/RHI.jpg',
+					username: 'zlaong',
+					Time: '刚刚',
+					reply: '1',
+					praise: '1',
+					content: '手表升级了os4 也卡出翔，每天打开体能训练就是一个痛苦的过程，宣传视频是做得好，但是能在30s内打开体能训练里的正在播放，就算我输，这才去年的设备就成这球样了。'
+				},{
+					src: '../components/article/images/Ni17.jpg',
+					username: 'Charsling',
+					Time: '刚刚',
+					reply: '2',
+					praise: '1',
+					content: '9.3.5路过～顺带提一句，iOS 11超过60%的安装率这应该得益于三款新机。'
+				},{
+					src: '../components/article/images/N9uLT.jpg',
+					username: '止步梦中',
+					Time: '31 分钟前',
+					reply: '8',
+					praise: '1',
+					content: 'iOS 11只更新了一个功能：变卡'
+				},{
+					src: '../components/article/images/CK.jpg',
+					username: '梵不高',
+					Time: '35 分钟前',
+					reply: '6',
+					praise: '2',
+					content: '要不是我犯二，我也在老版本'
+				},{
+					src: '../components/article/images/Grgb.jpg',
+					username: '猫爪印',
+					Time: '31 分钟前',
+					reply: '5',
+					praise: '2',
+					content: '为了催生新的机型购买需求，将系统做得越来越“胖”，越来越烧硬件，这样一味追逐利益，还是乔帮主在生时的企业宗旨么？库克，你要不要回答一下！？'
+				}],
+				Qdaily: '打开好奇心，查看更多评论'
+				
 			}
 		}
 	}
