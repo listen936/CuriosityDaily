@@ -6,8 +6,9 @@
                <div class="grid-articles-banner-bd">
                   <xswiper></xswiper>
                </div>
-            </div> 
-         </div>    
+            </div>
+         </div>
+         
       </div>
    </div>
 </template>
