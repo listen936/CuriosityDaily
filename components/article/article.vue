@@ -832,7 +832,7 @@
 		margin-left: -.75rem;
 	}
 	
-	show-fa4895bc6d…6c9b426d.css:1 .com-article-detail .article-detail-bd .detail>* {
+ .com-article-detail .article-detail-bd .detail>* {
 		margin-bottom: 20px;
 	}
 	
@@ -864,7 +864,7 @@
 		width: 100%;
 	}
 	
-	show-fa4895bc6d…6c9b426d.css:1 .com-article-detail .article-detail-bd .detail img {
+	.com-article-detail .article-detail-bd .detail img {
 		display: block;
 		margin: 0 auto;
 		max-width: 100%!important;
@@ -1140,7 +1140,7 @@
 		line-height: 30px;
 	}
 	
-	show-fa4895bc6d…6c9b426d.css:1 .com-grid-key-article .grid-key-article-bd .category span {
+	.com-grid-key-article .grid-key-article-bd .category span {
 		float: left;
 		padding: 2px 0;
 		color: #ffc81f;
