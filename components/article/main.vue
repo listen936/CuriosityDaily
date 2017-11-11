@@ -21,8 +21,8 @@
 						</div>
 						<span class="date smart-date" data-origindate="2017-11-09 07:10:41 +0800">1 小时前</span>
 					</div>
-					<div class="banner" @click="ShowImg">
-						<img src="./images/iPhone.jpg" alt="">
+					<div class="banner" >
+						<img src="./images/iPhone.jpg" alt="" @click="ShowImg">
 					</div>
 					<div class="com-share" data-id="47038" data-title="" data-pic="" data-url="" data-weiboappkey="2462590045" data-initialized="true" data-guid="1">
 						<div class="share-bd clearfix">
@@ -40,21 +40,21 @@
 						<p finallycleanhtml="true" nocleanhtml="true">{{p1}}</p>
 						<p>{{p2}}</p>
 						<div class="com-insert-images">
-							<figure style="margin: 0px;" @click="ShowImg">
-								<img data-ratio="1.331395" data-format="png" class=" lazyloaded" data-src="" src="./images/radius.png" style="height: 499.273px;">
+							<figure style="margin: 0px;">
+								<img data-ratio="1.331395" @click="ShowImg" data-format="png" class=" lazyloaded" data-src="" src="./images/radius.png" style="height: 499.273px;">
 							</figure>
 						</div>
 						<p>{{p3}}</p>
 						<p>{{p4}}</p>
 						<p>{{p5}}</p>
 						<div class="com-insert-images">
-							<figure style="margin: 0px;" @click="ShowImg">
-								<img data-ratio="0.482966" data-format="png" class=" lazyloaded" data-src="" src="./images/Rytm1.png" style="height: 181.112px;">
+							<figure style="margin: 0px;" >
+								<img @click="ShowImg" data-ratio="0.482966" data-format="png" class=" lazyloaded" data-src="" src="./images/Rytm1.png" style="height: 181.112px;">
 							</figure>
 						</div>
-						<div class="com-insert-images" @click="ShowImg">
-							<figure style="margin: 0px;">
-								<img data-ratio="0.492370" data-format="png" class=" lazyloaded" data-src="" src="./images/Rytm2.png" style="height: 184.639px;">
+						<div class="com-insert-images">
+							<figure style="margin: 0px;" >
+								<img @click="ShowImg" data-ratio="0.492370" data-format="png" class=" lazyloaded" data-src="" src="./images/Rytm2.png" style="height: 184.639px;">
 							</figure>
 						</div>
 						<p>{{p6}}</p>
@@ -161,6 +161,7 @@
 </template>
 
 <script>
+	import $ from "jquery";
 	export default {
 		data() {
 			return {
@@ -218,7 +219,6 @@
 					content: '为了催生新的机型购买需求，将系统做得越来越“胖”，越来越烧硬件，这样一味追逐利益，还是乔帮主在生时的企业宗旨么？库克，你要不要回答一下！？'
 				}],
 				Qdaily: '打开好奇心，查看更多评论'
-
 			}
 		},
 		methods:{
