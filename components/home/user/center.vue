@@ -9,7 +9,7 @@
 				</div>
 				<div class="users-center-radar-ft">
 					<div class="introduce"></div>
-					<div class="record"><span class="name">Lisen</span>,你的<span class="min-num">开脑洞</span>指数还不够哦！</div>
+					<div class="record"><span class="name">{{name}}</span>,你的<span class="min-num">开脑洞</span>指数还不够哦！</div>
 				</div>
 			</div>
 			<div class="com-users-center-switch" data-guid="5" data-initialized="true">
@@ -28,7 +28,7 @@
 							<div class="collect-loader">
 								<div class="com-loader nomore" data-guid="2" data-initialized="true">
 									<div class="loader-bd">
-										<p class="notext">没有更多啦1</p>
+										<p class="notext">没有更多啦</p>
 										<a rel="nofollow" href="#" class="btn showtext ripple">加载更多</a>
 										<div class="spinner">
 											<div class="bounce1"></div>
@@ -44,7 +44,7 @@
 							<div class="attend-loader">
 								<div class="com-loader nomore" data-guid="3" data-initialized="true">
 									<div class="loader-bd">
-										<p class="notext">没有更多啦2</p>
+										<p class="notext">没有更多啦</p>
 										<a rel="nofollow" href="#" class="btn showtext ripple">加载更多</a>
 										<div class="spinner">
 											<div class="bounce1"></div>
@@ -77,7 +77,7 @@
 					id:2
 				}],
 				id:1,
-
+				name:"",
 			}
 		},
 		methods:{
@@ -85,6 +85,7 @@
 				this.id = id
 			},
 		},
+
 		watch:{
 			id:function(){
 				if(this.id==1){
@@ -99,6 +100,11 @@
 						})
 				}
 			},
+			name:function(){
+				bus.$on("forchild",function(data){
+					this.name = data;
+				})
+			}
 		},
 
 	}
