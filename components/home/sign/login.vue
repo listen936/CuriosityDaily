@@ -56,9 +56,10 @@
                   password: this.password
                }).then(function (data) {
                   if (data.body != "") {
-                     this.$cookie.set("username", data.body, 7);
+                     this.$cookie.set("username", data.body);
                      this.$store.state.signShow = false;
-                     bus.$emit("statusChange", 1)
+                     
+                     bus.$emit("statusChange", 1);
                   } else {
                      oDiv.style.opacity = 1
                      oP.innerHTML = "邮箱与密码不符！"
