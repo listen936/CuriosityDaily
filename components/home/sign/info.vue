@@ -41,10 +41,9 @@
 							description:this.description
 						}).then(function(status){
 							this.$store.state.signShow = false;
-						})
-					
+						})	
 				} else {
-					var oDiv = document.querySelectorAll(".com-notification")[0];
+					var oDiv = document.querySelectorAll(".com-notification")[1];
 					oDiv.style.opacity = 1;
 					setTimeout(function() {
 						oDiv.style.opacity = 0;

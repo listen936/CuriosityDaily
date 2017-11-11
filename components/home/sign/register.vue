@@ -46,8 +46,8 @@
 				this.$store.state.switchNum = 2
 			},
 			changeNum3: function() {
-				var oDiv = document.querySelectorAll(".com-notification")[1];
-				var oP = document.querySelectorAll(".msg")[1];
+				var oDiv = document.querySelectorAll(".com-notification")[2];
+				var oP = document.querySelectorAll(".msg")[2];
 				if(this.email && this.pwd) {
 					
 					this.$store.state.email = this.email;
@@ -62,7 +62,6 @@
 							oDiv.style.opacity = 0;
 						},3000)
 							oP.innerHTML = "该邮箱已被注册！"
-							console.log("666");
 						}else{
 							this.$store.state.switchNum = 3;
 						}
