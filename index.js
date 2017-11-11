@@ -15,6 +15,7 @@ Vue.use(VueSwiper);
 import xhome from './components/home/home.vue';
 import xarticle from './components/article/article.vue';
 
+
 import xuser from './components/home/user/user.vue';
 import xaccount from './components/home/user/account.vue';
 import xcenter from './components/home/user/center.vue';
@@ -36,7 +37,7 @@ const router = new VueRouter({
    routes: [{
       path: "/article",
       component: xarticle,
-   }, {
+   },{
       path: "/home",
       component: xhome,
       children: [{

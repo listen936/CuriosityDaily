@@ -21,7 +21,7 @@
 						</div>
 						<span class="date smart-date" data-origindate="2017-11-09 07:10:41 +0800">1 小时前</span>
 					</div>
-					<div class="banner">
+					<div class="banner" @click="ShowImg">
 						<img src="./images/iPhone.jpg" alt="">
 					</div>
 					<div class="com-share" data-id="47038" data-title="" data-pic="" data-url="" data-weiboappkey="2462590045" data-initialized="true" data-guid="1">
@@ -219,6 +219,12 @@
 				}],
 				Qdaily: '打开好奇心，查看更多评论'
 
+			}
+		},
+		methods:{
+			ShowImg: function(){
+				console.log(this);
+				this.$parent.$children[2].bool = !this.$parent.$children[2].bool;
 			}
 		}
 	}
