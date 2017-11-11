@@ -41,7 +41,7 @@
                   description: this.description
                }).then(function (status) {
                   this.$store.state.signShow = false;
-                  this.$cookie.set('username',username);
+                  this.$cookie.set('username', this.username);
                   bus.$emit("statusChange", 1)
                })
             } else {
