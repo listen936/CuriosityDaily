@@ -9,7 +9,7 @@
          </div>
          <div class="header-right">
             <div class="user signin" :class="{'hidden':!loginStatus}">
-               <a rel="nofollow" href="#" class="user-hd" @click="funcDropDown">
+               <a rel="nofollow"  class="user-hd" @click="funcDropDown">
                   <i class="iconfont icon-user"></i>
                   <span class="name">{{username}}</span>
                </a>
