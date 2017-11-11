@@ -40,7 +40,7 @@
 						<p finallycleanhtml="true" nocleanhtml="true">{{p1}}</p>
 						<p>{{p2}}</p>
 						<div class="com-insert-images">
-							<figure style="margin: 0px;">
+							<figure style="margin: 0px;" @click="ShowImg">
 								<img data-ratio="1.331395" data-format="png" class=" lazyloaded" data-src="" src="./images/radius.png" style="height: 499.273px;">
 							</figure>
 						</div>
@@ -48,11 +48,11 @@
 						<p>{{p4}}</p>
 						<p>{{p5}}</p>
 						<div class="com-insert-images">
-							<figure style="margin: 0px;">
+							<figure style="margin: 0px;" @click="ShowImg">
 								<img data-ratio="0.482966" data-format="png" class=" lazyloaded" data-src="" src="./images/Rytm1.png" style="height: 181.112px;">
 							</figure>
 						</div>
-						<div class="com-insert-images">
+						<div class="com-insert-images" @click="ShowImg">
 							<figure style="margin: 0px;">
 								<img data-ratio="0.492370" data-format="png" class=" lazyloaded" data-src="" src="./images/Rytm2.png" style="height: 184.639px;">
 							</figure>
