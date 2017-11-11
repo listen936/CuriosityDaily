@@ -50,11 +50,9 @@
 		methods: {
 			loadMore: function() {
 				self = this;
-				this.$http.get("../assets/json/mix.json").then(function(data) {
-					setTimeout(function() {
+				this.$http.get("../assets/json/mix.json").then(function(data) {					
 						self.arr1 = self.arr1.concat(data.body.splice((self.n - 1) * 1, 1));
-						self.n = self.n + 1;
-					}, 2000)
+						self.n = self.n + 1;					
 				})
 			}
 		},
@@ -66,7 +64,9 @@
 				bind: function(el, binding) {
 					window.onscroll = function() {
 						if(document.documentElement.scrollTop + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
-							binding.value()
+								setTimeout(function() {
+									binding.value()
+								}, 2000)
 
 						}
 					}
