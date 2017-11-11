@@ -8,12 +8,12 @@
 						<div class="form-group fileupload"><label for="">头像</label> <input type="file" name="user[face_pic]" id="user_face_pic"> <span class="iconfont icon-right"></span>
 							<div class="preview"><img src="http://m.qdaily.com/images/missing_face.png" alt="Lisen"></div>
 						</div>
-						<div class="form-group"><label for="">姓名</label> <input type="text" value="" name="user[username]" id="user_username"> </div>
-						<div class="form-group"><label for="">简介</label> <input type="text" name="user[description]" id="user_description"> </div>
+						<div class="form-group"><label for="">姓名</label> <input type="text" :value="name" name="user[username]" id="user_username"> </div>
+						<div class="form-group"><label for="">简介</label> <input type="text" name="user[description]" id="user_description" :value="desc"> </div>
 					</div>
 					<p class="tip">联系方式</p>
 					<div class="contact">
-						<div class="form-group"><label for="">邮箱</label> <input type="text" value="f0b76ca5fdf6f27561b525f1be84e62a1510127227@qdaily.com" name="user[email]" id="user_email"> </div>
+						<div class="form-group"><label for="">邮箱</label> <input type="text" :value="email" name="user[email]" id="user_email"> </div>
 					</div>
 					<a href="/mobile/users/password" class="password">
 						<div class="form-group"><label for="">修改密码</label><span class="iconfont icon-right"></span></div>
@@ -29,7 +29,27 @@
 
 <script>
 	export default {
-
+		data(){
+			return {
+				email:'',
+				desc:'',
+				username:''
+			}
+		},
+		computed:{
+			name: function(){
+				return this.$cookie.get('username');
+			}	
+		},
+		mounted(){
+			var self = this;
+			this.$http.post("http://10.30.152.84:3000/users/getInfo",{
+				username:this.$cookie.get('username'),
+			}).then(function(data){
+				self.email = data.body.email;
+				self.desc = data.body.description;
+			})
+		}
 	}
 </script>
 

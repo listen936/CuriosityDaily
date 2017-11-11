@@ -64,6 +64,7 @@
 </template>
 
 <script>
+	
 	import $ from "jquery";
 	export default {
 		data:function(){
@@ -76,8 +77,7 @@
 					title:"我的收藏",
 					id:2
 				}],
-				id:1,
-				name:"",
+				id:1
 			}
 		},
 		methods:{
@@ -85,7 +85,11 @@
 				this.id = id
 			},
 		},
-
+		computed:{
+			name: function(){
+				return this.$cookie.get('username');
+			}	
+		},
 		watch:{
 			id:function(){
 				if(this.id==1){
@@ -99,14 +103,10 @@
 						$(".attend-paper").animate({left:0},function(){							
 						})
 				}
-			},
-			name:function(){
-				bus.$on("forchild",function(data){
-					this.name = data;
-				})
 			}
 		},
-
+		mounted(){
+		}
 	}
 
 </script>
