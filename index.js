@@ -33,7 +33,6 @@ import xlabs from "./components/home/labs/labs.vue"
 import xdetail from "./components/article/detail/detail.vue"
 
 
-
 const router = new VueRouter({
    routes: [{
       path: "/article",
@@ -86,9 +85,12 @@ const router = new VueRouter({
 const store = new Vuex.Store({
    state: {
       signShow: false,
-      switchNum: 0
+      switchNum: 0,
+      email:"",
+      pwd:""
    }
 });
+
 
 
 new Vue({
