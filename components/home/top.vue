@@ -16,22 +16,22 @@
                <div class="user-bd" :class="{'hidden':isDropShow}">
                   <ul class="items">
                      <li class="item">
-                        <a rel="nofollow" href="/mobile/users/center" target="_self">
+                        <a rel="nofollow" href="#/home/user/center" target="_self" @click="funcDropDown">
                            <i class="iconfont icon-user"></i>
                            个人中心
                         </a>
                      </li>
                      <li class="item account-setting-link">
-                        <a rel="nofollow" href="/mobile/users/edit" target="_self">
+                        <a rel="nofollow" href="#/home/user/account" target="_self" @click="funcDropDown">
                            <i class="iconfont icon-setting"></i>
                            账号设置
                         </a>
                      </li>
                      <li class="item account-logout">
-                        <form action="/users/sign_out" method="post">
+                        <form action="" method="" @click="logout">
                            <input type="hidden" name="_method" value="delete">
                            <input type="hidden" name="authenticity_token">
-                           <a rel="nofollow" href="#">
+                           <a rel="nofollow" href="#/home/content" @click="funcDropDown">
                               <i class="iconfont icon-logout"></i>
                               退出登录
                            </a>
@@ -78,6 +78,17 @@
                this.loginStatus = true;
                this.username = cookie;
             }
+         },
+         logout: function () {
+            this.$cookie.set("username", '');
+            this.$http.get("http://10.30.152.84:3000/logout",'logout').then(function(data){
+               if(data.body == '1'){
+                  console.log("注销成功");
+                  this.statusChange = this.statusChange + 1;
+               }else{
+                  console.log('err');
+               }
+            })
          }
       },
       watch: {
@@ -88,7 +99,7 @@
       mounted: function () {
          this.userStatus();
          var self = this;
-         bus.$on('statusChange', function(data){
+         bus.$on('statusChange', function (data) {
             self.statusChange = self.statusChange + data;
          })
       }
