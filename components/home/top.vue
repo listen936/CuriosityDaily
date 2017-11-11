@@ -8,12 +8,12 @@
             </a>
          </div>
          <div class="header-right">
-            <div class="user signin">
-               <a rel="nofollow" href="#" class="user-hd" @click="changeShow">
+            <div class="user signin" :class="{'hidden':!loginStatus}">
+               <a rel="nofollow" href="#" class="user-hd" @click="funcDropDown">
                   <i class="iconfont icon-user"></i>
-                  <span class="name">登录</span>
+                  <span class="name">{{username}}</span>
                </a>
-               <div class="user-bd hidden">
+               <div class="user-bd" :class="{'hidden':isDropShow}">
                   <ul class="items">
                      <li class="item">
                         <a rel="nofollow" href="/mobile/users/center" target="_self">
@@ -40,8 +40,8 @@
                   </ul>
                </div>
             </div>
-            <div class="user unsign hidden">
-               <a data-ga-event="mobile:open:login_popup" href="#" data-popup=".com-login-popup" class="user-hd open-popup">
+            <div class="user unsign" :class="{'hidden':loginStatus}">
+               <a data-ga-event="mobile:open:login_popup" href="#" data-popup=".com-login-popup" class="user-hd open-popup" @click="changeShow">
                   <i class="iconfont icon-user"></i>
                   登录
                </a>
@@ -52,17 +52,45 @@
 </template>
 
 <script>
+   import bus from '../bus'
    export default {
       data() {
          return {
-
+            isDropShow: true,
+            loginStatus: false,
+            username: "",
+            statusChange: 0
          }
       },
       methods: {
          changeShow: function () {
             this.$store.state.signShow = !this.$store.state.signShow;
 
+         },
+         funcDropDown: function () {
+            this.isDropShow = !this.isDropShow;
+         },
+         userStatus: function () {
+            var cookie = this.$cookie.get("username");
+            if (cookie == '' || !cookie) {
+               this.loginStatus = false;
+            } else {
+               this.loginStatus = true;
+               this.username = cookie;
+            }
          }
+      },
+      watch: {
+         statusChange: function () {
+            this.userStatus();
+         }
+      },
+      mounted: function () {
+         this.userStatus();
+         var self = this;
+         bus.$on('statusChange', function(data){
+            self.statusChange = self.statusChange + data;
+         })
       }
    }
 </script>

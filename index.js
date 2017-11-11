@@ -85,9 +85,6 @@ const store = new Vuex.Store({
       pwd:""
    }
 });
-
-
-
 new Vue({
    el: "#app",
    store,
