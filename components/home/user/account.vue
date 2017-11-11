@@ -8,7 +8,7 @@
 						<div class="form-group fileupload"><label for="">头像</label> <input type="file" name="user[face_pic]" id="user_face_pic"> <span class="iconfont icon-right"></span>
 							<div class="preview"><img src="http://m.qdaily.com/images/missing_face.png" alt="Lisen"></div>
 						</div>
-						<div class="form-group"><label for="">姓名</label> <input type="text" value="云流れ" name="user[username]" id="user_username"> </div>
+						<div class="form-group"><label for="">姓名</label> <input type="text" value="" name="user[username]" id="user_username"> </div>
 						<div class="form-group"><label for="">简介</label> <input type="text" name="user[description]" id="user_description"> </div>
 					</div>
 					<p class="tip">联系方式</p>
