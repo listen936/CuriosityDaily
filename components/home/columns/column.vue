@@ -89,18 +89,24 @@
 				},
 				methods: {
 					subscribe: function() {
-						var oP = document.querySelector(".msg");
-						var oDiv = document.querySelector(".com-notification")
-						this.flag = !this.flag;
-						oDiv.style.opacity = 1;
-						setTimeout(function(){
-							oDiv.style.opacity = 0;
-						},3000)
-						if(this.flag){
-							oP.innerHTML = "取消订阅！"
-						}else{	
-							oP.innerHTML = "订阅成功！"
+						var cookie = this.$cookie.get("username") || "";
+						if(cookie !=""){
+							var oP = document.querySelectorAll(".msg")[3];
+							var oDiv = document.querySelectorAll(".com-notification")[3];
+							this.flag = !this.flag;
+							oDiv.style.opacity = 1;
+							setTimeout(function(){
+								oDiv.style.opacity = 0;
+							},3000)
+							if(this.flag){
+								oP.innerHTML = "取消订阅！"
+							}else{	
+								oP.innerHTML = "订阅成功！"
+							}
+						}else{
+							this.$store.state.signShow = true;
 						}
+						
 					}
 				}
 			}

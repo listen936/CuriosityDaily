@@ -89,7 +89,7 @@
             </a>
             <a href="/mobile/aboutus.html" class="aboutus">关于我们</a>
          </div>
-         <a @click="sidebarShow" href="#" data-panle=".com-sidebar-panel" class="open-panel" style="display: block;">
+         <a @click="sidebarShow"  data-panle=".com-sidebar-panel" class="open-panel" style="display: block;">
             <span class="menu"></span>
          </a>
       </div>
