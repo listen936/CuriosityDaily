@@ -31,10 +31,11 @@ import xsearch from "./components/home/search/search.vue"
 import xlabs from "./components/home/labs/labs.vue"
 
 
+
 const router = new VueRouter({
    routes: [{
       path: "/article",
-      component: xarticle
+      component: xarticle,
    }, {
       path: "/home",
       component: xhome,
