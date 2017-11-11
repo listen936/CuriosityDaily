@@ -29,13 +29,19 @@ import xcolumn from "./components/home/columns/column.vue"
 import xsearch from "./components/home/search/search.vue"
 //生活研究院组件
 import xlabs from "./components/home/labs/labs.vue"
+//详情组件
+import xdetail from "./components/article/detail/detail.vue"
 
 
 
 const router = new VueRouter({
    routes: [{
       path: "/article",
-      component: xarticle
+      component: xarticle,
+      children: [{
+      	path: 'detail',
+      	component: xdetail
+      }]
    }, {
       path: "/home",
       component: xhome,
