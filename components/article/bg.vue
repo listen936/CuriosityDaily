@@ -6,7 +6,7 @@
             <p class="page__desc">画廊，可实现上传图片的展示或幻灯片播放</p>
          </div>
          <div class="weui-gallery" style="display: block">
-            <span v-if="bool" class="weui-gallery__img" :style="{'backgroundImage': 'url('+ url +')'}"></span>
+            <span class="weui-gallery__img" :style="{'backgroundImage': 'url('+ url +')'}"></span>
             <div class="weui-gallery__opr">
                <a href="javascript:" class="weui-gallery__del">
                   <i @click="Show" class="weui-icon-delete weui-icon_gallery-delete"></i>
@@ -28,7 +28,6 @@
       methods: {
          Show: function () {
             this.bool = false;
-            console.log(222);
          }
       }
    }

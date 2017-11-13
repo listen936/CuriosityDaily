@@ -258,7 +258,6 @@
          ShowImg: function (e) {
             
             var el = e.target;
-            console.log(el.src);
             this.currentSrc = el.src;
             this.$parent.$children[2].url = this.currentSrc;
             this.$parent.$children[2].bool = !this.$parent.$children[2].bool;
