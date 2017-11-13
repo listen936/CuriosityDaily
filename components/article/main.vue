@@ -24,13 +24,13 @@
                <div class="author-date clearfix">
                   <div class="author clearfix">
                      <span class="avatar x25 circle">
-                        <img src="./images/people.jpg" alt=""> </span>
+                        <img src="http://img.qdaily.com/user/face/20160702195030hOv4xzGADt1NU9ZX.jpg?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1" alt=""> </span>
                      <span class="name">周韶宏</span>
                   </div>
                   <span class="date smart-date" data-origindate="2017-11-09 07:10:41 +0800">1 小时前</span>
                </div>
                <div class="banner">
-                  <img src="./images/iPhone.jpg" alt="" @click="ShowImg">
+                  <img src="http://img.qdaily.com/article/article_show/201711081344004gw3q6mVWlKoBHej.JPG?imageMogr2/auto-orient/thumbnail/!580x344r/gravity/Center/crop/580x344/quality/85/format/jpg/ignore-error/1" alt="" @click="ShowImg">
                </div>
                <div class="com-share" data-id="47038" data-title="" data-pic="" data-url="" data-weiboappkey="2462590045" data-initialized="true"
                   data-guid="1">
@@ -50,7 +50,7 @@
                   <p>{{p2}}</p>
                   <div class="com-insert-images">
                      <figure style="margin: 0px;">
-                        <img data-ratio="1.331395" @click="ShowImg" data-format="png" class=" lazyloaded" data-src="" src="./images/radius.png" style="height: 499.273px;">
+                        <img data-ratio="1.331395" @click="ShowImg" data-format="png" class=" lazyloaded" data-src="" src="http://img.qdaily.com/uploads/201711081346144EO5pXVwW7LoDZCs.png-WebpMobileW550" style="height: 499.273px;">
                      </figure>
                   </div>
                   <p>{{p3}}</p>
@@ -58,12 +58,12 @@
                   <p>{{p5}}</p>
                   <div class="com-insert-images">
                      <figure style="margin: 0px;">
-                        <img @click="ShowImg" data-ratio="0.482966" data-format="png" class=" lazyloaded" data-src="" src="./images/Rytm1.png" style="height: 181.112px;">
+                        <img @click="ShowImg" data-ratio="0.482966" data-format="png" class=" lazyloaded" data-src="" src="http://img.qdaily.com/uploads/20171108134633JqLnbpaCdPz6Rytm.png-WebpMobileW550" style="height: 181.112px;">
                      </figure>
                   </div>
                   <div class="com-insert-images">
                      <figure style="margin: 0px;">
-                        <img @click="ShowImg" data-ratio="0.492370" data-format="png" class=" lazyloaded" data-src="" src="./images/Rytm2.png" style="height: 184.639px;">
+                        <img @click="ShowImg" data-ratio="0.492370" data-format="png" class=" lazyloaded" data-src="" src="http://img.qdaily.com/uploads/20171108134647ePGio6jghWuDK2UA.png-WebpMobileW550" style="height: 184.639px;">
                      </figure>
                   </div>
                   <p>{{p6}}</p>
@@ -216,35 +216,35 @@
             p14: '另外 iOS 11 最初版本取消了 3D Touch 手势——用力滑动屏幕左侧边缘启动多任务管理界面。这个举动在社交网络收到不少负面评价，虽然之后又被恢复。',
             p15: '题图由好奇心日报拍摄',
             arr: [{
-               src: '../components/article/images/RHI.jpg',
+               src: "http://img.qdaily.com/user/face/20160703130707hIR6n8VxHuUtL2yY.jpg?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1",
                username: 'zlaong',
                Time: '刚刚',
                reply: '1',
                praise: '1',
                content: '手表升级了os4 也卡出翔，每天打开体能训练就是一个痛苦的过程，宣传视频是做得好，但是能在30s内打开体能训练里的正在播放，就算我输，这才去年的设备就成这球样了。'
             }, {
-               src: '../components/article/images/Ni17.jpg',
+               src: "http://img.qdaily.com/user/face/20161101233145RBb3MIxWY5vAQh6t.jpg?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1",
                username: 'Charsling',
                Time: '刚刚',
                reply: '2',
                praise: '1',
                content: '9.3.5路过～顺带提一句，iOS 11超过60%的安装率这应该得益于三款新机。'
             }, {
-               src: '../components/article/images/N9uLT.jpg',
+               src: "http://m.qdaily.com/images/missing_face.png",
                username: '止步梦中',
                Time: '31 分钟前',
                reply: '8',
                praise: '1',
                content: 'iOS 11只更新了一个功能：变卡'
             }, {
-               src: '../components/article/images/CK.jpg',
+               src: "http://img.qdaily.com/user/face/20160607201755N8xsDMFYZCzl5fVA.jpg?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/quality/85/format/jpg/ignore-error/1",
                username: '梵不高',
                Time: '35 分钟前',
                reply: '6',
                praise: '2',
                content: '要不是我犯二，我也在老版本'
             }, {
-               src: '../components/article/images/Grgb.jpg',
+               src: "http://m.qdaily.com/images/missing_face.png",
                username: '猫爪印',
                Time: '31 分钟前',
                reply: '5',
