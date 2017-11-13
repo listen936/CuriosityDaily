@@ -20,15 +20,15 @@
 								<a href="javascript:;">{{a.title}}</a>
 							</li>
 						</ul>
-					</div>
-					<div class="baseslide-wrapper" style="height: 100px;">
-						<div class="baseslide collect-article"  :class="id==1?'cur':'left'" style="left:0px">
+					</div>					
+						<div class="baseslide-wrapper" style="height: 100px;">
+						<div class="baseslide collect-article"  :class="id==1?'cur':'left'" style="transition:all 0.5s" @click="left">
 							<div class="packery-container articles clearfix" data-lastkey="0"></div>
 							<div class="origin-container" style="display:none"></div>
 							<div class="collect-loader">
 								<div class="com-loader nomore" data-guid="2" data-initialized="true">
 									<div class="loader-bd">
-										<p class="notext">没有更多啦</p>
+										<p class="notext">没有更多啦1</p>
 										<a rel="nofollow" href="#" class="btn showtext ripple">加载更多</a>
 										<div class="spinner">
 											<div class="bounce1"></div>
@@ -39,12 +39,12 @@
 								</div>
 							</div>
 						</div>
-						<div class="baseslide attend-paper"  :class="id==2? 'cur' : 'right'" style="left:375px">
+						<div class="baseslide attend-paper"  :class="id==2? 'cur' : 'right'" style="transition:all 0.5s" @click="right">
 							<div class="papers clearfix" data-lastkey="0"></div>
 							<div class="attend-loader">
 								<div class="com-loader nomore" data-guid="3" data-initialized="true">
 									<div class="loader-bd">
-										<p class="notext">没有更多啦</p>
+										<p class="notext">没有更多啦2</p>
 										<a rel="nofollow" href="#" class="btn showtext ripple">加载更多</a>
 										<div class="spinner">
 											<div class="bounce1"></div>
@@ -65,7 +65,7 @@
 
 <script>
 	
-	import $ from "jquery";
+//	import $ from "jquery";
 	export default {
 		data:function(){
 			return {
@@ -84,6 +84,18 @@
 			changebar:function(id){
 				this.id = id
 			},
+			left:function(){
+				var Collect = document.querySelector(".collect-article");
+				var Attend = document.querySelector(".attend-paper");
+				Collect.style.left = 0;
+				Attend.style.left = 375;
+			},
+			right:function(){
+				var Collect = document.querySelector(".collect-article");
+				var Attend = document.querySelector(".attend-paper");
+				Collect.style.left = -375;
+				Attend.style.left = 0;
+			}
 		},
 		computed:{
 			name: function(){
@@ -91,7 +103,7 @@
 			}	
 		},
 		watch:{
-			id:function(){
+/*			id:function(){
 				if(this.id==1){
 						$(".collect-article").animate({left:0},function(){						
 						})
@@ -103,15 +115,15 @@
 						$(".attend-paper").animate({left:0},function(){							
 						})
 				}
-			}
+			}*/
 		},
-		mounted(){
-		}
+
 	}
 
 </script>
 
 <style lang="scss" scoped>
+
 	body{
 		height:667px,;
 		background-color:#f2f2f2;
