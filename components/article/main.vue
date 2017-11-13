@@ -194,7 +194,6 @@
 </template>
 
 <script>
-   import bus from "../bus"
    export default {
       data() {
          return {
@@ -252,18 +251,18 @@
                content: '为了催生新的机型购买需求，将系统做得越来越“胖”，越来越烧硬件，这样一味追逐利益，还是乔帮主在生时的企业宗旨么？库克，你要不要回答一下！？'
             }],
             Qdaily: '打开好奇心，查看更多评论',
-            currentSrc: undefined
+            currentSrc: ''
          }
       },
       methods: {
          ShowImg: function (e) {
             
             var el = e.target;
-            console.log(el);
-            currentSrc = el.src;
-            console.log(currentSrc);
-            bus.$emit("sendSrc", currentSrc);
-            // this.$parent.$children[2].bool = !this.$parent.$children[2].bool;
+            console.log(el.src);
+            this.currentSrc = el.src;
+            this.$parent.$children[2].url = this.currentSrc;
+            this.$parent.$children[2].bool = !this.$parent.$children[2].bool;
+            
          }
       }
    }
