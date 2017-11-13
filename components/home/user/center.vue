@@ -65,7 +65,6 @@
 
 <script>
 	
-//	import $ from "jquery";
 	export default {
 		data:function(){
 			return {
@@ -103,19 +102,7 @@
 			}	
 		},
 		watch:{
-/*			id:function(){
-				if(this.id==1){
-						$(".collect-article").animate({left:0},function(){						
-						})
-						$(".attend-paper").animate({left:375},function(){							
-						})					
-				}else{
-						$(".collect-article").animate({left:-375},function(){							
-						})
-						$(".attend-paper").animate({left:0},function(){							
-						})
-				}
-			}*/
+
 		},
 
 	}
