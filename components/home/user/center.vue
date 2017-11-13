@@ -28,7 +28,7 @@
 							<div class="collect-loader">
 								<div class="com-loader nomore" data-guid="2" data-initialized="true">
 									<div class="loader-bd">
-										<p class="notext">没有更多啦1</p>
+										<p class="notext">没有更多啦</p>
 										<a rel="nofollow" href="#" class="btn showtext ripple">加载更多</a>
 										<div class="spinner">
 											<div class="bounce1"></div>
@@ -44,7 +44,7 @@
 							<div class="attend-loader">
 								<div class="com-loader nomore" data-guid="3" data-initialized="true">
 									<div class="loader-bd">
-										<p class="notext">没有更多啦2</p>
+										<p class="notext">没有更多啦</p>
 										<a rel="nofollow" href="#" class="btn showtext ripple">加载更多</a>
 										<div class="spinner">
 											<div class="bounce1"></div>
@@ -65,7 +65,7 @@
 
 <script>
 	
-//	import $ from "jquery";
+
 	export default {
 		data:function(){
 			return {
@@ -102,21 +102,7 @@
 				return this.$cookie.get('username');
 			}	
 		},
-		watch:{
-/*			id:function(){
-				if(this.id==1){
-						$(".collect-article").animate({left:0},function(){						
-						})
-						$(".attend-paper").animate({left:375},function(){							
-						})					
-				}else{
-						$(".collect-article").animate({left:-375},function(){							
-						})
-						$(".attend-paper").animate({left:0},function(){							
-						})
-				}
-			}*/
-		},
+
 
 	}
 
