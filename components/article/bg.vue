@@ -6,7 +6,7 @@
             <p class="page__desc">画廊，可实现上传图片的展示或幻灯片播放</p>
          </div>
          <div class="weui-gallery" style="display: block">
-            <span class="weui-gallery__img" style="background-image: url(" + _src + ");"></span>
+            <span class="weui-gallery__img" :style="{'backgroundImage': 'url('+ url +')'}"></span>
             <div class="weui-gallery__opr">
                <a href="javascript:" class="weui-gallery__del">
                   <i @click="Show" class="weui-icon-delete weui-icon_gallery-delete"></i>
@@ -18,24 +18,17 @@
 </template>
 
 <script>
-   import bus from '../bus'
    export default {
       data() {
          return {
             bool: false,
-            currentSrc: undefined
+            url: ''
          }
       },
       methods: {
          Show: function () {
             this.bool = false;
-            console.log(222);
          }
-      },
-      mounted: function () {
-         bus.$on("sendSrc", function (data) {
-            currentSrc = data;
-         })
       }
    }
 </script>
@@ -45,4 +38,5 @@
       position: absolute;
       top: 0;
    }
+
 </style>
