@@ -24,7 +24,6 @@
 </template>
 
 <script>
-	import $ from "jquery";
 	export default {
 		data() {
 			return {
@@ -34,24 +33,23 @@
 		},
 		methods:{
 			Show: function(){
-				$("#TEXT").focus(function(){
-					$("#submit").addClass("enabled");
-					$("#text").html("");
-				});
-				$("#TEXT").blur(function(){
-					$("#submit").removeClass("enabled");
-					$("#text").html("搜索");
-				});
+				var oText = document.getElementById("TEXT");
+				var oSubmit = document.getElementById("submit");
+				var otext1 = document.getElementById("text");
+				oText.onfocus = function(){
+					oSubmit.className += " " + 'enabled';
+					otext1.innerHTML = '';
+				}
+				oText.onblur = function(){
+					oSubmit.className = "submit";
+					otext1.innerHTML = '搜索';
+				}
+				
 			},
 			localMore: function(){
 				var _this = this;
-				$.ajax({
-					type: 'GET',
-					url: '../components/home/search/search.json',
-					async: true,
-					success: function(data){
-						_this.arr = _this.arr.concat(data[0].title);
-					}
+				this.$http.get('../components/home/search/search.json').then(function(data){
+					_this.arr = _this.arr.concat(data.body[0].title);
 				})
 			}
 		},

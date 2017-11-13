@@ -256,7 +256,6 @@
       },
       methods: {
          ShowImg: function (e) {
-            
             var el = e.target;
             this.currentSrc = el.src;
             this.$parent.$children[2].url = this.currentSrc;
