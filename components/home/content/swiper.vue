@@ -1,7 +1,7 @@
 <template>
    <swiper :options="swiperOption" ref="mySwiper">
       <!-- slides -->
-      <a href="/mobile/articles/47008.html" class="swiper-slide" data-title="把报道改编成电影，这个《太平洋大逃杀》开启的潮流，现在进行得怎样了？"
+      <a href="#/article" class="swiper-slide" data-title="把报道改编成电影，这个《太平洋大逃杀》开启的潮流，现在进行得怎样了？"
          style="background-image: url(&quot;http://img.qdaily.com/article/banner/20171107180111aqtm0W37CeFYly1x.jpg?imageMogr2/auto-orient/thumbnail/!640x360r/gravity/Center/crop/640x360/quality/85/format/jpg/ignore-error/1&quot;); width: 375px;"
          data-swiper-slide-index="4">
          <div class="category-title">

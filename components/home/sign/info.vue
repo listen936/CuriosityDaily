@@ -41,9 +41,10 @@
                   email: this.$store.state.email,
                   description: this.description
                }).then(function (status) {
+                  this.$store.state.switchNum = 0;
                   this.$store.state.signShow = false;
                   this.$cookie.set('username', this.username);
-                  bus.$emit("statusChange", 1)
+                  bus.$emit("statusChange", 1);
                })
             } else {
                var oDiv = document.querySelectorAll(".com-notification")[1];

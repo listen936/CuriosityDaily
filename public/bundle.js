@@ -25059,7 +25059,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -25113,9 +25113,10 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
                email: this.$store.state.email,
                description: this.description
             }).then(function (status) {
+               this.$store.state.switchNum = 0;
                this.$store.state.signShow = false;
                this.$cookie.set('username', this.username);
-               __WEBPACK_IMPORTED_MODULE_0__bus__["a" /* default */].$emit("statusChange", 1)
+               __WEBPACK_IMPORTED_MODULE_0__bus__["a" /* default */].$emit("statusChange", 1);
             })
          } else {
             var oDiv = document.querySelectorAll(".com-notification")[1];
@@ -28070,7 +28071,7 @@ var render = function() {
             width: "375px"
           },
           attrs: {
-            href: "/mobile/articles/47008.html",
+            href: "#/article",
             "data-title":
               "把报道改编成电影，这个《太平洋大逃杀》开启的潮流，现在进行得怎样了？",
             "data-swiper-slide-index": "4"
