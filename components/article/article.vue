@@ -3,7 +3,7 @@
 		<xheader></xheader>
 		<xmain></xmain>
 		<xbg></xbg>
-		<router-view></router-view>
+		<!-- <router-view></router-view> -->
 	</div>
 </template>
 
